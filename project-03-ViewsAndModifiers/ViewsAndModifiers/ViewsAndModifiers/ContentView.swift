@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+struct ProminentTitle: ViewModifier {
+  func body(content: Content) -> some View {
+    content
+      .font(.largeTitle)
+      .foregroundColor(.blue)
+  }
+}
+
+extension View {
+  func prominentTitle() -> some View {
+    self.modifier(ProminentTitle())
+  }
+}
+
 struct GridStack<Content: View>: View {
   let rows: Int
   let columns: Int
@@ -33,9 +47,14 @@ struct GridStack<Content: View>: View {
 
 struct ContentView: View {
   var body: some View {
-    GridStack(rows: 4, columns: 4) { row, col in
-      Image(systemName: "\(row * 4 + col).circle")
-      Text("R\(row) C\(col)")
+    VStack(spacing: 30) {
+      Text("Using a GridStack")
+        .prominentTitle()
+
+      GridStack(rows: 4, columns: 4) { row, col in
+        Image(systemName: "\(row * 4 + col).circle")
+        Text("R\(row) C\(col)")
+      }
     }
   }
 }
