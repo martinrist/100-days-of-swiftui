@@ -39,6 +39,7 @@ struct ContentView: View {
           Text("\(coffeeAmount) cup\(coffeeAmount > 1 ? "s" : "")")
         }
       }
+      .padding()
       .navigationTitle("BetterRest")
       .navigationBarItems(trailing: Button(action: calculateBedtime) {
         Text("Calculate")
@@ -47,7 +48,6 @@ struct ContentView: View {
   }
   
   func calculateBedtime() {
-    
   }
 }
 
