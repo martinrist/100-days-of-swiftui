@@ -26,7 +26,7 @@ struct ContentView: View {
   
   var body: some View {
     NavigationView {
-      VStack {
+      Form {
         Text("When do you want to wake up?")
           .font(.headline)
         
@@ -50,7 +50,6 @@ struct ContentView: View {
           Text("\(coffeeAmount) cup\(coffeeAmount > 1 ? "s" : "")")
         }
       }
-      .padding()
       .navigationTitle("BetterRest")
       .navigationBarItems(trailing: Button(action: calculateBedtime) {
         Text("Calculate")
