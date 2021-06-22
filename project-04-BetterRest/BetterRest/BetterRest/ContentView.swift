@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-  
-  @State private var wakeUp = Date()
+
+  static var defaultWakeTime: Date {
+    var components = DateComponents()
+    components.hour = 7
+    components.minute = 0
+    return Calendar.current.date(from: components) ?? Date()
+  }
+
+  @State private var wakeUp = defaultWakeTime
   @State private var sleepAmount = 8.0
   @State private var coffeeAmount = 1
 
