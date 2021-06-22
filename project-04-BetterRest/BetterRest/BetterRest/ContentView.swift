@@ -27,27 +27,34 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       Form {
-        Text("When do you want to wake up?")
-          .font(.headline)
-        
-        DatePicker("Please enter a time",
-                   selection: $wakeUp,
-                   displayedComponents: .hourAndMinute)
-          .datePickerStyle(WheelDatePickerStyle())
-          .labelsHidden()
-        
-        Text("Desired abount of sleep")
-          .font(.headline)
-        
-        Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
-          Text("\(sleepAmount, specifier: "%g") hours")
+
+        VStack(alignment: .leading, spacing: 0) {
+          Text("When do you want to wake up?")
+            .font(.headline)
+
+          DatePicker("Please enter a time",
+                     selection: $wakeUp,
+                     displayedComponents: .hourAndMinute)
+            .datePickerStyle(WheelDatePickerStyle())
+            .labelsHidden()
         }
-        
-        Text("Daily coffee intake")
-          .font(.headline)
-        
-        Stepper(value: $coffeeAmount, in: 1...20) {
-          Text("\(coffeeAmount) cup\(coffeeAmount > 1 ? "s" : "")")
+
+        VStack(alignment: .leading, spacing: 0) {
+          Text("Desired abount of sleep")
+            .font(.headline)
+
+          Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+            Text("\(sleepAmount, specifier: "%g") hours")
+          }
+        }
+
+        VStack(alignment: .leading, spacing: 0) {
+          Text("Daily coffee intake")
+            .font(.headline)
+
+          Stepper(value: $coffeeAmount, in: 1...20) {
+            Text("\(coffeeAmount) cup\(coffeeAmount > 1 ? "s" : "")")
+          }
         }
       }
       .navigationTitle("BetterRest")
