@@ -22,6 +22,7 @@ struct ContentView: View {
         DatePicker("Please enter a time",
                    selection: $wakeUp,
                    displayedComponents: .hourAndMinute)
+          .datePickerStyle(WheelDatePickerStyle())
           .labelsHidden()
         
         Text("Desired abount of sleep")
