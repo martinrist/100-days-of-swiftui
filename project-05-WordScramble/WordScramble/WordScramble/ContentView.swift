@@ -44,6 +44,11 @@ struct ContentView: View {
 
     guard answer.count > 0 else { return }
 
+    guard answer != rootWord else {
+      wordError(title: "Original word used", message: "That's cheating")
+      return
+    }
+
     guard isOriginal(word: answer) else {
       wordError(title: "Word used already", message: "Be more original")
       return
@@ -90,6 +95,8 @@ struct ContentView: View {
   }
 
   func isReal(word: String) -> Bool {
+    guard word.count >= 3 else { return false }
+
     let checker = UITextChecker()
     let range = NSRange(location: 0, length: word.utf16.count)
     let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
