@@ -35,8 +35,8 @@ struct ContentView: View {
       .alert(isPresented: $showingError) {
         Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
       }
+      .navigationBarItems(leading: Button("New Game", action: startGame))
     }
-
   }
 
   func addNewWord() {
@@ -73,6 +73,7 @@ struct ContentView: View {
        let startWords = try? String(contentsOf: startWordsURL) {
       let allWords = startWords.components(separatedBy: "\n")
       rootWord = allWords.randomElement() ?? "silkworm"
+      usedWords = []
       return
     }
     fatalError("Could not load start.txt from bundle.")
