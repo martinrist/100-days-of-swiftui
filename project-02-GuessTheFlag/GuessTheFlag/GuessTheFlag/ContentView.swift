@@ -29,6 +29,9 @@ struct ContentView: View {
   @State private var scoreTitle = ""
   @State private var score = 0
 
+  @State private var rotationAnimationAmount = 0.0
+  @State private var opacityAnimationAmount = 1.0
+
   var body: some View {
     ZStack {
       LinearGradient(gradient: Gradient(colors: [.blue, .black]),
@@ -47,11 +50,15 @@ struct ContentView: View {
         }
 
         ForEach(0 ..< 3) { number in
+          let correct = number == correctAnswer
           Button(action: {
             flagTapped(number)
           }) {
             FlagImage(country: countries[number])          
           }
+          .rotation3DEffect(.degrees(correct ? rotationAnimationAmount : 0),
+                            axis: (x:0, y: 1, z: 0))
+          .opacity(correct ? 1.0 : opacityAnimationAmount)
         }
 
         Text("Score: \(score)")
@@ -74,6 +81,10 @@ struct ContentView: View {
     if number == correctAnswer {
       scoreTitle = "Correct"
       score += 1
+      withAnimation {
+        rotationAnimationAmount += 360
+        opacityAnimationAmount = 0.25
+      }
     } else {
       scoreTitle = "Wrong!  That's the flag of \(countries[number])"
       score -= 1
@@ -85,6 +96,7 @@ struct ContentView: View {
   func askQuestion() {
     countries.shuffle()
     correctAnswer = Int.random(in: 0...2)
+    opacityAnimationAmount = 1
   }
 }
 
