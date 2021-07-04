@@ -14,6 +14,7 @@ struct ContentView: View {
   @State private var inputMinutes = 0
   @State private var inputSeconds = 0
 
+
   let units: [UnitPace] = [.minutesPerKilometer, .minutesPerMile]
 
   var inputSymbol: String { units[inputUnit].symbol }
