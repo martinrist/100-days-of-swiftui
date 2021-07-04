@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-enum QuizSize {
+enum QuizSize: CustomStringConvertible, Hashable, Identifiable {
   case fixed(quantity: Int)
   case all
+
+  var id: QuizSize { self }
 
   var description: String {
     switch self {
@@ -26,11 +28,11 @@ struct SetupView: View {
   @Binding var questions: [Question]
 
   @State private var maxTable = 12
-  @State private var quizSizeOptions: [QuizSize] = [.fixed(quantity: 5),
-                                                    .fixed(quantity: 10),
-                                                    .fixed(quantity: 20),
-                                                    .all]
-  @State private var quizSizeOptionSelection = 0
+  private let quizSizeOptions: [QuizSize] = [.fixed(quantity: 5),
+                                             .fixed(quantity: 10),
+                                             .fixed(quantity: 20),
+                                             .all]
+  @State private var quizSizeOptionSelection = QuizSize.all
 
   var body: some View {
     Form {
@@ -42,8 +44,8 @@ struct SetupView: View {
 
       Section(header: Text("How many questions would you like?")) {
         Picker("How many questions?", selection: $quizSizeOptionSelection) {
-          ForEach(0..<quizSizeOptions.count) {
-            Text(quizSizeOptions[$0].description)
+          ForEach(quizSizeOptions) { option in
+            Text(option.description)
           }
         }
         .pickerStyle(.segmented)
@@ -51,7 +53,7 @@ struct SetupView: View {
     }
     .navigationBarTitle("Setup")
     .navigationBarItems(trailing: Button("Play") {
-      questions = generateQuestions(upToTable: maxTable, quizSize: quizSizeOptions[quizSizeOptionSelection])
+      questions = generateQuestions(upToTable: maxTable, quizSize: quizSizeOptionSelection)
       settingUp.toggle()
     })
   }
