@@ -7,18 +7,16 @@
 
 import SwiftUI
 
-enum QuestionQuantity: String, CaseIterable {
-  case five = "5"
-  case ten = "10"
-  case twenty = "20"
-  case all = "All"
+enum QuizSize {
+  case fixed(quantity: Int)
+  case all
 
-  var number: Int? {
+  var description: String {
     switch self {
-    case .five: return 5
-    case .ten: return 10
-    case .twenty: return 20
-    case .all: return nil       // TODO: replace sentinel value
+    case .all:
+      return "All"
+    case .fixed(let quantity):
+      return "\(quantity)"
     }
   }
 }
@@ -28,8 +26,11 @@ struct SetupView: View {
   @Binding var questions: [Question]
 
   @State private var maxTable = 12
-  @State private var numberOfQuestions = QuestionQuantity.allCases
-  @State private var numberOfQuestionsOption = 0
+  @State private var quizSizeOptions: [QuizSize] = [.fixed(quantity: 5),
+                                                    .fixed(quantity: 10),
+                                                    .fixed(quantity: 20),
+                                                    .all]
+  @State private var quizSizeOptionSelection = 0
 
   var body: some View {
     Form {
@@ -40,9 +41,9 @@ struct SetupView: View {
       }
 
       Section(header: Text("How many questions would you like?")) {
-        Picker("How many questions?", selection: $numberOfQuestionsOption) {
-          ForEach(0..<QuestionQuantity.allCases.count) {
-            Text(QuestionQuantity.allCases[$0].rawValue)
+        Picker("How many questions?", selection: $quizSizeOptionSelection) {
+          ForEach(0..<quizSizeOptions.count) {
+            Text(quizSizeOptions[$0].description)
           }
         }
         .pickerStyle(.segmented)
@@ -50,12 +51,12 @@ struct SetupView: View {
     }
     .navigationBarTitle("Setup")
     .navigationBarItems(trailing: Button("Play") {
-      questions = generateQuestions(upToTable: maxTable, quantity: numberOfQuestions[numberOfQuestionsOption])
+      questions = generateQuestions(upToTable: maxTable, quizSize: quizSizeOptions[quizSizeOptionSelection])
       settingUp.toggle()
     })
   }
 
-  func generateQuestions(upToTable: Int, quantity: QuestionQuantity) -> [Question] {
+  func generateQuestions(upToTable: Int, quizSize: QuizSize) -> [Question] {
     let allQuestions =
     (1...upToTable).flatMap { op1 in
       (1...12).map { op2 in (op1, op2) }
@@ -65,11 +66,11 @@ struct SetupView: View {
     }
     .shuffled()
 
-    switch quantity {
+    switch quizSize {
     case .all:
       return allQuestions
-    default:
-      return Array(allQuestions.prefix(quantity.number ?? 0))
+    case .fixed(let quantity):
+      return Array(allQuestions.prefix(quantity))
     }
   }
 }
