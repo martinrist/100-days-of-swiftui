@@ -17,7 +17,7 @@ struct ContentView: View {
       if settingUp {
         SetupView(settingUp: $settingUp, questions: $questions)
       } else {
-        GameView(settingUp: $settingUp, questions: $questions)
+        GameView(settingUp: $settingUp, questions: questions)
       }
     }
   }

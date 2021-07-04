@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
 
   @Binding var settingUp: Bool
-  @Binding var questions: [Question]
+  var questions: [Question]
 
   @State private var currentQuestion: Int = 0
   @State private var currentAnswer = ""
@@ -18,9 +18,9 @@ struct GameView: View {
 
   @State private var showingQuestionResult = false
   @State private var showingGameEndAlert = false
-  @State private var alertTitle = ""
-  @State private var alertMessage = ""
-  @State private var dismissAlertClosure: () -> Void = {}
+  @State private var questionResultAlertTitle = ""
+  @State private var questionResultAlertMessage = ""
+  @State private var questionResultDismissAction: () -> Void = {}
 
   private var gameOver: Bool {
     currentQuestion == questions.count
@@ -52,10 +52,10 @@ struct GameView: View {
         Button("Submit Answer", action: markQuestion)
           .padding()
           .alert(isPresented: $showingQuestionResult) {
-            Alert(title: Text(alertTitle),
-                  message: Text(alertMessage),
+            Alert(title: Text(questionResultAlertTitle),
+                  message: Text(questionResultAlertMessage),
                   dismissButton: .default(Text("Next"),
-                                          action: dismissAlertClosure))
+                                          action: questionResultDismissAction))
           }
       }
     }
@@ -68,9 +68,9 @@ struct GameView: View {
 
   func markQuestion() {
     guard let numericAnswer = Int(currentAnswer) else {
-      alertTitle = "Try again!"
-      alertMessage = "Please enter a whole number"
-      dismissAlertClosure = {
+      questionResultAlertTitle = "Try again!"
+      questionResultAlertMessage = "Please enter a whole number"
+      questionResultDismissAction = {
         currentAnswer = ""
       }
       showingQuestionResult = true
@@ -81,9 +81,9 @@ struct GameView: View {
     let answerCorrect = question.isCorrect(answer: numericAnswer)
 
     score += answerCorrect ? 1 : 0
-    alertTitle = answerCorrect ? "Correct!" : "Wrong!"
-    alertMessage = "\(question.questionText) is \(question.correctAnswer)"
-    dismissAlertClosure = nextQuestion
+    questionResultAlertTitle = answerCorrect ? "Correct!" : "Wrong!"
+    questionResultAlertMessage = "\(question.questionText) is \(question.correctAnswer)"
+    questionResultDismissAction = nextQuestion
     showingQuestionResult = true
   }
 
@@ -100,12 +100,12 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
   static var previews: some View {
-    GameView(settingUp: .constant(false), questions: .constant([
+    GameView(settingUp: .constant(false), questions: [
       Question(operand1: 5, operand2: 2),
       Question(operand1: 7, operand2: 5),
       Question(operand1: 3, operand2: 12),
       Question(operand1: 10, operand2: 4),
       Question(operand1: 7, operand2: 2)
-    ]))
+    ])
   }
 }

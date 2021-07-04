@@ -24,14 +24,15 @@ enum QuizSize: CustomStringConvertible, Hashable, Identifiable {
 }
 
 struct SetupView: View {
-  @Binding var settingUp: Bool
-  @Binding var questions: [Question]
-
-  @State private var maxTable = 12
   private let quizSizeOptions: [QuizSize] = [.fixed(quantity: 5),
                                              .fixed(quantity: 10),
                                              .fixed(quantity: 20),
                                              .all]
+
+  @Binding var settingUp: Bool
+  @Binding var questions: [Question]
+
+  @State private var maxTable = 12
   @State private var quizSizeOptionSelection = QuizSize.all
 
   var body: some View {
