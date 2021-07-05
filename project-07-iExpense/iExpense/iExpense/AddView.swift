@@ -11,12 +11,13 @@ struct AddView: View {
 
   @ObservedObject var expenses: Expenses
 
+  @Environment(\.presentationMode) var presentationMode
+
   @State private var name = ""
   @State private var type = "Business"
   @State private var amount = ""
 
   static let types = ["Business", "Personal"]
-
 
   var body: some View {
     NavigationView {
@@ -34,6 +35,13 @@ struct AddView: View {
           .keyboardType(.numberPad)
       }
       .navigationBarTitle("Add new expense")
+      .navigationBarItems(trailing: Button("Save") {
+        if let actualAmount = Int(self.amount) {
+          let item = ExpenseItem(name: name, type: type, amount: actualAmount)
+          expenses.items.append(item)
+          presentationMode.wrappedValue.dismiss()
+        }
+      })
     }
   }
 }
