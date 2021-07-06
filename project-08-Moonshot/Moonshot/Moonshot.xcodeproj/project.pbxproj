@@ -17,6 +17,7 @@
 		2F89469526949EE2000EF961 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89469426949EE2000EF961 /* Bundle-Decodable.swift */; };
 		2F8946972694A053000EF961 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8946962694A053000EF961 /* Mission.swift */; };
 		2F8946992694A480000EF961 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8946982694A480000EF961 /* MissionView.swift */; };
+		2F89469B2694A9A6000EF961 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89469A2694A9A6000EF961 /* AstronautView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2F89469426949EE2000EF961 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		2F8946962694A053000EF961 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		2F8946982694A480000EF961 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		2F89469A2694A9A6000EF961 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				2F31D10D269498460000BA3A /* MoonshotApp.swift */,
 				2F31D10F269498460000BA3A /* ContentView.swift */,
 				2F8946982694A480000EF961 /* MissionView.swift */,
+				2F89469A2694A9A6000EF961 /* AstronautView.swift */,
 				2F31D111269498470000BA3A /* Assets.xcassets */,
 				2F31D113269498470000BA3A /* Preview Content */,
 			);
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F89469B2694A9A6000EF961 /* AstronautView.swift in Sources */,
 				2F89469326949EA9000EF961 /* Astronaut.swift in Sources */,
 				2F31D110269498460000BA3A /* ContentView.swift in Sources */,
 				2F31D10E269498460000BA3A /* MoonshotApp.swift in Sources */,
