@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    Text("Hello, world!")
-      .padding()
+    NavigationView {
+      List {
+        NavigationLink(destination: PathExampleView()) {
+          Text("`Path` example")
+        }
+        NavigationLink(destination: ShapeExampleView()) {
+          Text("`Shape` example")
+        }
+        NavigationLink(destination: InsettableShapeExampleView()) {
+          Text("`InsettableShape` example")
+        }
+      }
+      .navigationBarTitle("Drawing")
+    }
   }
 }
 
