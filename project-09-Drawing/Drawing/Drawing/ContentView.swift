@@ -32,6 +32,10 @@ struct ContentView: View {
         NavigationLink(destination: BlendModeExampleView()) {
           Text("`blendMode()` example")
         }
+        NavigationLink(destination: AnimatableDataExampleView()) {
+          Text("`animatableData` example")
+        }
+
       }
       .navigationBarTitle("Drawing")
     }

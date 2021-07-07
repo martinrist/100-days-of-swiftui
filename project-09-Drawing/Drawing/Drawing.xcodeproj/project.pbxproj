@@ -18,6 +18,7 @@
 		2FC81E412695FD0B004FD52D /* ImagePaintExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E402695FD0B004FD52D /* ImagePaintExampleView.swift */; };
 		2FC81E432695FFE9004FD52D /* DrawingGroupExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E422695FFE9004FD52D /* DrawingGroupExampleView.swift */; };
 		2FC81E45269603CD004FD52D /* BlendModeExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E44269603CD004FD52D /* BlendModeExampleView.swift */; };
+		2FC81E4726960647004FD52D /* AnimatableDataExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E4626960647004FD52D /* AnimatableDataExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2FC81E402695FD0B004FD52D /* ImagePaintExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintExampleView.swift; sourceTree = "<group>"; };
 		2FC81E422695FFE9004FD52D /* DrawingGroupExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingGroupExampleView.swift; sourceTree = "<group>"; };
 		2FC81E44269603CD004FD52D /* BlendModeExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeExampleView.swift; sourceTree = "<group>"; };
+		2FC81E4626960647004FD52D /* AnimatableDataExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDataExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				2FC81E402695FD0B004FD52D /* ImagePaintExampleView.swift */,
 				2FC81E422695FFE9004FD52D /* DrawingGroupExampleView.swift */,
 				2FC81E44269603CD004FD52D /* BlendModeExampleView.swift */,
+				2FC81E4626960647004FD52D /* AnimatableDataExampleView.swift */,
 				2F0956CD2694E74200C139CB /* Assets.xcassets */,
 				2F0956CF2694E74200C139CB /* Preview Content */,
 			);
@@ -167,6 +170,7 @@
 				2F0956DA2694EDA900C139CB /* ShapeExampleView.swift in Sources */,
 				2FC81E45269603CD004FD52D /* BlendModeExampleView.swift in Sources */,
 				2F0956CA2694E74200C139CB /* DrawingApp.swift in Sources */,
+				2FC81E4726960647004FD52D /* AnimatableDataExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
