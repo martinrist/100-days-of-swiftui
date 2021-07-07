@@ -23,6 +23,9 @@ struct ContentView: View {
         NavigationLink(destination: CGAffineTransformExampleView()) {
           Text("`CGAffineTransform` example")
         }
+        NavigationLink(destination: ImagePaintExampleView()) {
+          Text("`ImagePaint` example")
+        }
       }
       .navigationBarTitle("Drawing")
     }
