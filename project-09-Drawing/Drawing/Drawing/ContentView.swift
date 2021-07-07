@@ -20,6 +20,9 @@ struct ContentView: View {
         NavigationLink(destination: InsettableShapeExampleView()) {
           Text("`InsettableShape` example")
         }
+        NavigationLink(destination: CGAffineTransformExampleView()) {
+          Text("`CGAffineTransform` example")
+        }
       }
       .navigationBarTitle("Drawing")
     }

@@ -14,6 +14,7 @@
 		2F0956D82694ED1300C139CB /* PathExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0956D72694ED1300C139CB /* PathExampleView.swift */; };
 		2F0956DA2694EDA900C139CB /* ShapeExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0956D92694EDA900C139CB /* ShapeExampleView.swift */; };
 		2F0956DC2694EE6E00C139CB /* InsettableShapeExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0956DB2694EE6E00C139CB /* InsettableShapeExampleView.swift */; };
+		2FC81E3F2695F99B004FD52D /* CGAffineTransformExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E3E2695F99B004FD52D /* CGAffineTransformExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2F0956D72694ED1300C139CB /* PathExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExampleView.swift; sourceTree = "<group>"; };
 		2F0956D92694EDA900C139CB /* ShapeExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExampleView.swift; sourceTree = "<group>"; };
 		2F0956DB2694EE6E00C139CB /* InsettableShapeExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableShapeExampleView.swift; sourceTree = "<group>"; };
+		2FC81E3E2695F99B004FD52D /* CGAffineTransformExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2F0956D72694ED1300C139CB /* PathExampleView.swift */,
 				2F0956D92694EDA900C139CB /* ShapeExampleView.swift */,
 				2F0956DB2694EE6E00C139CB /* InsettableShapeExampleView.swift */,
+				2FC81E3E2695F99B004FD52D /* CGAffineTransformExampleView.swift */,
 				2F0956CD2694E74200C139CB /* Assets.xcassets */,
 				2F0956CF2694E74200C139CB /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0956CC2694E74200C139CB /* ContentView.swift in Sources */,
+				2FC81E3F2695F99B004FD52D /* CGAffineTransformExampleView.swift in Sources */,
 				2F0956D82694ED1300C139CB /* PathExampleView.swift in Sources */,
 				2F0956DC2694EE6E00C139CB /* InsettableShapeExampleView.swift in Sources */,
 				2F0956DA2694EDA900C139CB /* ShapeExampleView.swift in Sources */,
