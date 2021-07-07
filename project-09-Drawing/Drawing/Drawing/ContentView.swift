@@ -35,6 +35,9 @@ struct ContentView: View {
         NavigationLink(destination: AnimatableDataExampleView()) {
           Text("`animatableData` example")
         }
+        NavigationLink(destination: AnimatablePairExampleView()) {
+          Text("`AnimatablePair` example")
+        }
 
       }
       .navigationBarTitle("Drawing")

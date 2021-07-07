@@ -19,6 +19,7 @@
 		2FC81E432695FFE9004FD52D /* DrawingGroupExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E422695FFE9004FD52D /* DrawingGroupExampleView.swift */; };
 		2FC81E45269603CD004FD52D /* BlendModeExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E44269603CD004FD52D /* BlendModeExampleView.swift */; };
 		2FC81E4726960647004FD52D /* AnimatableDataExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E4626960647004FD52D /* AnimatableDataExampleView.swift */; };
+		2FC81E4926960850004FD52D /* AnimatablePairExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC81E4826960850004FD52D /* AnimatablePairExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2FC81E422695FFE9004FD52D /* DrawingGroupExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingGroupExampleView.swift; sourceTree = "<group>"; };
 		2FC81E44269603CD004FD52D /* BlendModeExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeExampleView.swift; sourceTree = "<group>"; };
 		2FC81E4626960647004FD52D /* AnimatableDataExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDataExampleView.swift; sourceTree = "<group>"; };
+		2FC81E4826960850004FD52D /* AnimatablePairExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				2FC81E422695FFE9004FD52D /* DrawingGroupExampleView.swift */,
 				2FC81E44269603CD004FD52D /* BlendModeExampleView.swift */,
 				2FC81E4626960647004FD52D /* AnimatableDataExampleView.swift */,
+				2FC81E4826960850004FD52D /* AnimatablePairExampleView.swift */,
 				2F0956CD2694E74200C139CB /* Assets.xcassets */,
 				2F0956CF2694E74200C139CB /* Preview Content */,
 			);
@@ -164,6 +167,7 @@
 				2FC81E432695FFE9004FD52D /* DrawingGroupExampleView.swift in Sources */,
 				2FC81E412695FD0B004FD52D /* ImagePaintExampleView.swift in Sources */,
 				2F0956CC2694E74200C139CB /* ContentView.swift in Sources */,
+				2FC81E4926960850004FD52D /* AnimatablePairExampleView.swift in Sources */,
 				2FC81E3F2695F99B004FD52D /* CGAffineTransformExampleView.swift in Sources */,
 				2F0956D82694ED1300C139CB /* PathExampleView.swift in Sources */,
 				2F0956DC2694EE6E00C139CB /* InsettableShapeExampleView.swift in Sources */,
