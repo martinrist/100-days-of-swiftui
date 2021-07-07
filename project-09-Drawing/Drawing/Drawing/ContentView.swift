@@ -29,6 +29,9 @@ struct ContentView: View {
         NavigationLink(destination: DrawingGroupExampleView()) {
           Text("`drawingGroup()` example")
         }
+        NavigationLink(destination: BlendModeExampleView()) {
+          Text("`blendMode()` example")
+        }
       }
       .navigationBarTitle("Drawing")
     }
