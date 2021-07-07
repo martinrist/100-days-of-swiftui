@@ -38,6 +38,9 @@ struct ContentView: View {
         NavigationLink(destination: AnimatablePairExampleView()) {
           Text("`AnimatablePair` example")
         }
+        NavigationLink(destination: SpirographView()) {
+          Text("Spirograph example")
+        }
 
       }
       .navigationBarTitle("Drawing")
