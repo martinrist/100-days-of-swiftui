@@ -26,6 +26,9 @@ struct ContentView: View {
         NavigationLink(destination: ImagePaintExampleView()) {
           Text("`ImagePaint` example")
         }
+        NavigationLink(destination: DrawingGroupExampleView()) {
+          Text("`drawingGroup()` example")
+        }
       }
       .navigationBarTitle("Drawing")
     }
