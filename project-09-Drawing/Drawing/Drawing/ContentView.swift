@@ -11,37 +11,44 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List {
-        NavigationLink(destination: PathExampleView()) {
-          Text("`Path` example")
+        Group {
+          NavigationLink(destination: PathExampleView()) {
+            Text("`Path` example")
+          }
+          NavigationLink(destination: ShapeExampleView()) {
+            Text("`Shape` example")
+          }
+          NavigationLink(destination: InsettableShapeExampleView()) {
+            Text("`InsettableShape` example")
+          }
+          NavigationLink(destination: CGAffineTransformExampleView()) {
+            Text("`CGAffineTransform` example")
+          }
+          NavigationLink(destination: ImagePaintExampleView()) {
+            Text("`ImagePaint` example")
+          }
+          NavigationLink(destination: DrawingGroupExampleView()) {
+            Text("`drawingGroup()` example")
+          }
+          NavigationLink(destination: BlendModeExampleView()) {
+            Text("`blendMode()` example")
+          }
+          NavigationLink(destination: AnimatableDataExampleView()) {
+            Text("`animatableData` example")
+          }
+          NavigationLink(destination: AnimatablePairExampleView()) {
+            Text("`AnimatablePair` example")
+          }
+          NavigationLink(destination: SpirographView()) {
+            Text("Spirograph example")
+          }
         }
-        NavigationLink(destination: ShapeExampleView()) {
-          Text("`Shape` example")
-        }
-        NavigationLink(destination: InsettableShapeExampleView()) {
-          Text("`InsettableShape` example")
-        }
-        NavigationLink(destination: CGAffineTransformExampleView()) {
-          Text("`CGAffineTransform` example")
-        }
-        NavigationLink(destination: ImagePaintExampleView()) {
-          Text("`ImagePaint` example")
-        }
-        NavigationLink(destination: DrawingGroupExampleView()) {
-          Text("`drawingGroup()` example")
-        }
-        NavigationLink(destination: BlendModeExampleView()) {
-          Text("`blendMode()` example")
-        }
-        NavigationLink(destination: AnimatableDataExampleView()) {
-          Text("`animatableData` example")
-        }
-        NavigationLink(destination: AnimatablePairExampleView()) {
-          Text("`AnimatablePair` example")
-        }
-        NavigationLink(destination: SpirographView()) {
-          Text("Spirograph example")
-        }
+        Group {
 
+          NavigationLink(destination: ArrowChallengeView()) {
+            Text("Challenge 1 - `Arrow`")
+          }
+        }
       }
       .navigationBarTitle("Drawing")
     }
