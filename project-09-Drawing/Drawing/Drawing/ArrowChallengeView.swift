@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct Arrow: Shape {
+  var lineWidth: Double
+
+  var animatableData: Double {
+    get { lineWidth }
+    set { self.lineWidth = newValue }
+  }
+
   func path(in rect: CGRect) -> Path {
     var path = Path()
 
@@ -20,14 +27,27 @@ struct Arrow: Shape {
     path.addLine(to: CGPoint(x: rect.maxX * 3/4, y: rect.maxY))
     path.addLine(to: CGPoint(x: rect.maxX / 4, y: rect.maxY))
 
-    return path.strokedPath(StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+    return path.strokedPath(StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
   }
 }
 
 struct ArrowChallengeView: View {
+
+  @State private var lineWidth = 5.0
+
   var body: some View {
-    Arrow()
-      .frame(width: 300, height: 300)
+    VStack {
+      Arrow(lineWidth: lineWidth)
+        .frame(width: 300, height: 300)
+        .animation(.default)
+
+      Spacer()
+
+      Stepper(value: $lineWidth, in: 0...50, step: 5) {
+        Text("Line width \(lineWidth, specifier: "%g")")
+      }
+    }
+    .padding()
   }
 }
 

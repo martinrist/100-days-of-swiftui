@@ -46,7 +46,7 @@ struct ContentView: View {
         Group {
 
           NavigationLink(destination: ArrowChallengeView()) {
-            Text("Challenge 1 - `Arrow`")
+            Text("`Arrow` challenge")
           }
         }
       }
