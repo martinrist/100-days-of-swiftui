@@ -44,9 +44,11 @@ struct ContentView: View {
           }
         }
         Group {
-
           NavigationLink(destination: ArrowChallengeView()) {
             Text("`Arrow` challenge")
+          }
+          NavigationLink(destination: ColourCyclingRectangleChallengeView()) {
+            Text("`ColourCyclingRectangle` challenge")
           }
         }
       }
