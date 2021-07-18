@@ -16,13 +16,15 @@ struct ContentView: View {
     NavigationView {
       List {
         ForEach(modelData.actitivies) { activity in
-          HStack {
-            VStack(alignment: .leading) {
-              Text("\(activity.title)")
-              Text("\(activity.description)").font(.caption)
+          NavigationLink(destination: ActivityDetailView(activity: activity)) {
+            HStack {
+              VStack(alignment: .leading) {
+                Text("\(activity.title)")
+                Text("\(activity.description)").font(.caption)
+              }
+              Spacer()
+              Text("\(activity.timesCompleted)")
             }
-            Spacer()
-            Text("\(activity.timesCompleted)")
           }
         }
         .onDelete(perform: deleteActivities)
