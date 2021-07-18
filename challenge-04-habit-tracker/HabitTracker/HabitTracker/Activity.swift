@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-struct Activity: Identifiable {
+struct Activity: Identifiable, Codable {
   var id = UUID()
   var title: String
   var description: String
@@ -16,7 +16,23 @@ struct Activity: Identifiable {
 }
 
 class ModelData: ObservableObject {
-  @Published var activities: [Activity] = []
+  @Published var activities: [Activity] = [] {
+    didSet {
+      let encoder = JSONEncoder()
+      if let encoded = try? encoder.encode(activities) {
+        UserDefaults.standard.set(encoded, forKey: "Activities")
+      }
+    }
+  }
+
+  init() {
+    if let activities = UserDefaults.standard.data(forKey: "Activities") {
+      let decoder = JSONDecoder()
+      if let decoded = try? decoder.decode([Activity].self, from: activities) {
+        self.activities = decoded
+      }
+    }
+  }
 }
 
 extension ModelData {
