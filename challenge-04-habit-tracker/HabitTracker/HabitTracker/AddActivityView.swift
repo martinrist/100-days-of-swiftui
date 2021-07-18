@@ -11,9 +11,13 @@ struct AddActivityView: View {
 
   @Environment(\.presentationMode) var presentationMode
 
-  @ObservedObject var activities: ModelData
+  @ObservedObject var modelData: ModelData
   @State private var title = ""
   @State private var description = ""
+
+  var formValid: Bool {
+    !title.isEmpty && !description.isEmpty
+  }
 
   var body: some View {
     NavigationView {
@@ -22,17 +26,22 @@ struct AddActivityView: View {
         TextField("Description", text: $description)
       }
       .navigationBarTitle("Add Activity")
-      .navigationBarItems(trailing: Button("Save") {
-        let activity = Activity(title: title, description: description)
-        activities.actitivies.append(activity)
-        presentationMode.wrappedValue.dismiss()
-      })
+      .navigationBarItems(
+        leading: Button("Cancel", action: { presentationMode.wrappedValue.dismiss() }),
+        trailing: Button("Save", action: saveActivity).disabled(!formValid)
+      )
     }
+  }
+
+  func saveActivity() {
+    let activity = Activity(title: title, description: description)
+    modelData.actitivies.append(activity)
+    presentationMode.wrappedValue.dismiss()
   }
 }
 
 struct AddActivityView_Previews: PreviewProvider {
   static var previews: some View {
-    AddActivityView(activities: ModelData())
+    AddActivityView(modelData: ModelData())
   }
 }

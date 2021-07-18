@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
 
-  @ObservedObject var activities: ModelData
+  @ObservedObject var modelData: ModelData
   @State private var showingAddSheet = false
 
   var body: some View {
     NavigationView {
       List {
-        ForEach(activities.actitivies) { activity in
+        ForEach(modelData.actitivies) { activity in
           Text("\(activity.title)")
         }
         .onDelete(perform: deleteActivities)
@@ -27,17 +27,17 @@ struct ContentView: View {
       })
     }
     .sheet(isPresented: $showingAddSheet) {
-      AddActivityView(activities: activities)
+      AddActivityView(modelData: modelData)
     }
   }
 
   func deleteActivities(offsets: IndexSet) {
-    activities.actitivies.remove(atOffsets: offsets)
+    modelData.actitivies.remove(atOffsets: offsets)
   }
 }
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(activities: ModelData())
+    ContentView(modelData: ModelData())
   }
 }
