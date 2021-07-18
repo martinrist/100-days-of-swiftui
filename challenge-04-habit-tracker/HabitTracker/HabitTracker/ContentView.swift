@@ -15,8 +15,8 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List {
-        ForEach(modelData.activities) { activity in
-          ActivityRowView(activity: activity)
+        ForEach($modelData.activities) { $activity in
+          ActivityRowView(activity: $activity)
         }
         .onDelete(perform: deleteActivities)
       }
@@ -38,10 +38,10 @@ struct ContentView: View {
 
 struct ActivityRowView: View {
 
-  @ObservedObject var activity: Activity
+  @Binding var activity: Activity
 
   var body: some View {
-    NavigationLink(destination: ActivityDetailView(activity: activity)) {
+    NavigationLink(destination: ActivityDetailView(activity: $activity)) {
       HStack {
         VStack(alignment: .leading) {
           Text("\(activity.title)")
