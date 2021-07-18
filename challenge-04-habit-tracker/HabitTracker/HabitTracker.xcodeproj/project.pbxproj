@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F2DF47D26A47A8D00F125EA /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2DF47C26A47A8D00F125EA /* Activity.swift */; };
+		2F66AD9126A47F5100A85039 /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66AD9026A47F5100A85039 /* AddActivityView.swift */; };
 		2FD0633326A4794900D35EEC /* HabitTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0633226A4794900D35EEC /* HabitTrackerApp.swift */; };
 		2FD0633526A4794900D35EEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0633426A4794900D35EEC /* ContentView.swift */; };
 		2FD0633726A4794A00D35EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD0633626A4794A00D35EEC /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2DF47C26A47A8D00F125EA /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		2F66AD9026A47F5100A85039 /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 		2FD0632F26A4794900D35EEC /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD0633226A4794900D35EEC /* HabitTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerApp.swift; sourceTree = "<group>"; };
 		2FD0633426A4794900D35EEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			children = (
 				2FD0633226A4794900D35EEC /* HabitTrackerApp.swift */,
 				2FD0633426A4794900D35EEC /* ContentView.swift */,
+				2F66AD9026A47F5100A85039 /* AddActivityView.swift */,
+				2F2DF47C26A47A8D00F125EA /* Activity.swift */,
 				2FD0633626A4794A00D35EEC /* Assets.xcassets */,
 				2FD0633B26A4794A00D35EEC /* Info.plist */,
 				2FD0633826A4794A00D35EEC /* Preview Content */,
@@ -104,7 +110,7 @@
 				};
 			};
 			buildConfigurationList = 2FD0632A26A4794900D35EEC /* Build configuration list for PBXProject "HabitTracker" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2DF47D26A47A8D00F125EA /* Activity.swift in Sources */,
+				2F66AD9126A47F5100A85039 /* AddActivityView.swift in Sources */,
 				2FD0633526A4794900D35EEC /* ContentView.swift in Sources */,
 				2FD0633326A4794900D35EEC /* HabitTrackerApp.swift in Sources */,
 			);
