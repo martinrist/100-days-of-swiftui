@@ -15,17 +15,8 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List {
-        ForEach(modelData.actitivies) { activity in
-          NavigationLink(destination: ActivityDetailView(activity: activity)) {
-            HStack {
-              VStack(alignment: .leading) {
-                Text("\(activity.title)")
-                Text("\(activity.description)").font(.caption)
-              }
-              Spacer()
-              Text("\(activity.timesCompleted)")
-            }
-          }
+        ForEach(modelData.activities) { activity in
+          ActivityRowView(activity: activity)
         }
         .onDelete(perform: deleteActivities)
       }
@@ -45,7 +36,22 @@ struct ContentView: View {
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ActivityRowView: View {
+
+  @ObservedObject var activity: Activity
+
+  var body: some View {
+    NavigationLink(destination: ActivityDetailView(activity: activity)) {
+      HStack {
+        VStack(alignment: .leading) {
+          Text("\(activity.title)")
+          Text("\(activity.description)").font(.caption)
+        }
+        Spacer()
+        Text("\(activity.timesCompleted)")
+      }
+    }
+  }
 
 }
 

@@ -9,15 +9,18 @@ import SwiftUI
 
 struct ActivityDetailView: View {
 
-  var activity: Activity
+  @ObservedObject var activity: Activity
 
   var body: some View {
-      Form {
-        Text(activity.title)
-        Text(activity.description)
-        Text("Completed \(activity.timesCompleted) times")
+    Form {
+      Text(activity.title)
+      Text(activity.description)
+      Text("Completed \(activity.timesCompleted) times")
+      Button("Complete Activity") {
+        activity.timesCompleted += 1
       }
       .navigationBarTitle("Activity Detail")
+    }
   }
 }
 

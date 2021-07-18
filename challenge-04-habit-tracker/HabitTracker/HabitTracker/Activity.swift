@@ -8,11 +8,17 @@
 import Foundation
 import Combine
 
-struct Activity: Identifiable {
+class Activity: Identifiable, ObservableObject {
   var id = UUID()
   var title: String
   var description: String
-  var timesCompleted = 0
+  @Published var timesCompleted = 0
+
+  init(title: String, description: String, timesCompleted: Int = 0) {
+    self.title = title
+    self.description = description
+    self.timesCompleted = timesCompleted
+  }
 }
 
 class ModelData: ObservableObject {
