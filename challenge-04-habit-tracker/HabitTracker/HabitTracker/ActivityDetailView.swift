@@ -23,6 +23,6 @@ struct ActivityDetailView: View {
 
 struct ActivityDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    ActivityDetailView(activity: Activity(title: "Activity 1", description: "Description 1", timesCompleted: 42))
+    ActivityDetailView(activity: ModelData.testData.activities[0])
   }
 }

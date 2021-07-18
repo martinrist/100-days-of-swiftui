@@ -35,7 +35,7 @@ struct AddActivityView: View {
 
   func saveActivity() {
     let activity = Activity(title: title, description: description)
-    modelData.actitivies.append(activity)
+    modelData.activities.append(activity)
     presentationMode.wrappedValue.dismiss()
   }
 }
