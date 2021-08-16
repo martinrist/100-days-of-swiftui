@@ -49,7 +49,7 @@ struct ContentView: View {
           }
         }
       }
-      .navigationBarTitle("Cupcake Corner")
+      .navigationTitle("Cupcake Corner")
     }
   }
 }
