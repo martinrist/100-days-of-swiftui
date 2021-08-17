@@ -67,7 +67,10 @@ class Order: ObservableObject, Codable {
   init() { }
 
   var hasValidAddress: Bool {
-    if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+    if name.isEmptyOrWhitespace()
+        || streetAddress.isEmptyOrWhitespace()
+        || city.isEmptyOrWhitespace()
+        || zip.isEmptyOrWhitespace() {
       return false
     } else {
       return true

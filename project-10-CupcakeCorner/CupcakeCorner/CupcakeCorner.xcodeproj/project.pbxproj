@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F09B19B26CC0C5600BEABFD /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F09B19A26CC0C5600BEABFD /* String+Additions.swift */; };
 		2F2EF51726CAAB4A004713DF /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2EF51626CAAB4A004713DF /* CupcakeCornerApp.swift */; };
 		2F2EF51926CAAB4A004713DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2EF51826CAAB4A004713DF /* ContentView.swift */; };
 		2F2EF51B26CAAB4B004713DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2EF51A26CAAB4B004713DF /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F09B19A26CC0C5600BEABFD /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		2F2EF51326CAAB4A004713DF /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2EF51626CAAB4A004713DF /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		2F2EF51826CAAB4A004713DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				2F5A7F2726CABB63004361C5 /* AddressView.swift */,
 				2F5A7F2926CABD30004361C5 /* CheckoutView.swift */,
 				2F2EF52426CAB860004713DF /* Order.swift */,
+				2F09B19A26CC0C5600BEABFD /* String+Additions.swift */,
 				2F2EF51A26CAAB4B004713DF /* Assets.xcassets */,
 				2F2EF51C26CAAB4B004713DF /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				2F2EF52526CAB860004713DF /* Order.swift in Sources */,
 				2F5A7F2826CABB63004361C5 /* AddressView.swift in Sources */,
+				2F09B19B26CC0C5600BEABFD /* String+Additions.swift in Sources */,
 				2F5A7F2A26CABD30004361C5 /* CheckoutView.swift in Sources */,
 				2F2EF51926CAAB4A004713DF /* ContentView.swift in Sources */,
 				2F2EF51726CAAB4A004713DF /* CupcakeCornerApp.swift in Sources */,
