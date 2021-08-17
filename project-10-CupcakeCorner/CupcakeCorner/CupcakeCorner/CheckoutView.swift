@@ -14,6 +14,9 @@ struct CheckoutView: View {
   @State private var confirmationMessage = ""
   @State private var showingConfirmation = false
 
+  @State private var errorMessage = ""
+  @State private var showingError = false
+
   var body: some View {
     GeometryReader { reader in
       ScrollView {
@@ -25,21 +28,25 @@ struct CheckoutView: View {
 
           Text("Your total is $\(order.cost, specifier: "%.2f")")
             .font(.title)
+            .alert(isPresented: $showingError) {
+              Alert(title: Text("Sorry"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            }
 
           Button("Place order", action: placeOrder)
-          .padding()
+            .padding()
+            .alert(isPresented: $showingConfirmation) {
+              Alert(title: Text("Thank you"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
+            }
         }
       }
     }
     .navigationBarTitle("Check out", displayMode: .inline)
-    .alert(isPresented: $showingConfirmation) {
-      Alert(title: Text("Thank you"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
-    }
   }
 
   func placeOrder() {
     guard let encoded = try? JSONEncoder().encode(order) else {
-      print("Failed to encode order")
+      errorMessage = "Failed to encode order"
+      showingError = true
       return
     }
 
@@ -51,7 +58,8 @@ struct CheckoutView: View {
 
     URLSession.shared.dataTask(with: request) { data, response, error in
       guard let data = data else {
-        print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
+        errorMessage = "No data in response: \(error?.localizedDescription ?? "Unknown error")."
+        showingError = true
         return
       }
 
@@ -59,7 +67,8 @@ struct CheckoutView: View {
         confirmationMessage = "Your order for \(decodedOrder.quantity) x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
         showingConfirmation = true
       } else {
-        print("Invalid response from server")
+        errorMessage = "Invalid response from server"
+        showingError = true
       }
 
     }.resume()
