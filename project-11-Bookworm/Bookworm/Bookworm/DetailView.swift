@@ -43,7 +43,11 @@ struct DetailView: View {
         
         RatingView(rating: .constant(Int(book.rating)))
           .font(.largeTitle)
-        
+
+        let entered = book.date?.formatted() ?? "No date"
+        Text("Entered at: \(entered)")
+          .padding()
+
         Spacer()
       }
     }
