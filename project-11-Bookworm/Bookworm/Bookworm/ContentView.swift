@@ -34,24 +34,33 @@ struct ContentView: View {
               Text(book.author ?? "Unknown author")
                 .foregroundColor(.secondary)
             }
-
           }
         }
+        .onDelete(perform: deleteBooks)
       }
-
-
-
-        .navigationBarTitle("Bookworm")
-        .navigationBarItems(trailing: Button(action: {
+      .navigationBarTitle("Bookworm")
+      .navigationBarItems(
+        leading: EditButton(),
+        trailing: Button(action: {
           self.showingAddScreen.toggle()
         }) {
           Image(systemName: "plus")
         })
-        .sheet(isPresented: $showingAddScreen) {
-          AddBookView().environment(\.managedObjectContext, moc)
-        }
+      .sheet(isPresented: $showingAddScreen) {
+        AddBookView().environment(\.managedObjectContext, moc)
+      }
     }
   }
+
+  func deleteBooks(at offsets: IndexSet) {
+    for offset in offsets {
+      let book = books[offset]
+      moc.delete(book)
+    }
+
+    try? moc.save()
+  }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
