@@ -9,8 +9,14 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+  @Environment(\.managedObjectContext) var moc
+
   var body: some View {
-    Text("Hello World!")
+    Button("Save") {
+      if moc.hasChanges {
+        try? moc.save()
+      }
+    }
   }
 
 }
