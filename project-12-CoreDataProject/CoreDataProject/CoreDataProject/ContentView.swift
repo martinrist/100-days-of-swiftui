@@ -24,6 +24,9 @@ struct ContentView: View {
         NavigationLink(destination: DynamicFilteringExampleView()) {
           Text("Dynamic Filtering")
         }
+        NavigationLink(destination: OneToManyExampleView()) {
+          Text("One to Many Relationships")
+        }
       }
       .navigationTitle("Core Data Examples")
     }

@@ -22,6 +22,11 @@
 		2F70C39326CFFA3100ABCB30 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39126CFFA3100ABCB30 /* Singer+CoreDataClass.swift */; };
 		2F70C39426CFFA3100ABCB30 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39226CFFA3100ABCB30 /* Singer+CoreDataProperties.swift */; };
 		2F70C39626CFFB0200ABCB30 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39526CFFB0200ABCB30 /* FilteredList.swift */; };
+		2F70C39826CFFE1700ABCB30 /* OneToManyExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39726CFFE1700ABCB30 /* OneToManyExampleView.swift */; };
+		2F70C39D26CFFEE600ABCB30 /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39926CFFEE600ABCB30 /* Candy+CoreDataClass.swift */; };
+		2F70C39E26CFFEE600ABCB30 /* Candy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39A26CFFEE600ABCB30 /* Candy+CoreDataProperties.swift */; };
+		2F70C39F26CFFEE600ABCB30 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39B26CFFEE600ABCB30 /* Country+CoreDataClass.swift */; };
+		2F70C3A026CFFEE600ABCB30 /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39C26CFFEE600ABCB30 /* Country+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		2F70C39126CFFA3100ABCB30 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2F70C39226CFFA3100ABCB30 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F70C39526CFFB0200ABCB30 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		2F70C39726CFFE1700ABCB30 /* OneToManyExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToManyExampleView.swift; sourceTree = "<group>"; };
+		2F70C39926CFFEE600ABCB30 /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F70C39A26CFFEE600ABCB30 /* Candy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F70C39B26CFFEE600ABCB30 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F70C39C26CFFEE600ABCB30 /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,10 @@
 		2F70C37126CFEAA200ABCB30 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				2F70C39926CFFEE600ABCB30 /* Candy+CoreDataClass.swift */,
+				2F70C39A26CFFEE600ABCB30 /* Candy+CoreDataProperties.swift */,
+				2F70C39B26CFFEE600ABCB30 /* Country+CoreDataClass.swift */,
+				2F70C39C26CFFEE600ABCB30 /* Country+CoreDataProperties.swift */,
 				2F70C39126CFFA3100ABCB30 /* Singer+CoreDataClass.swift */,
 				2F70C39226CFFA3100ABCB30 /* Singer+CoreDataProperties.swift */,
 				2F70C38526CFECF200ABCB30 /* Movie+CoreDataClass.swift */,
@@ -84,6 +98,7 @@
 				2F70C38D26CFF80800ABCB30 /* FilteringExampleView.swift */,
 				2F70C38F26CFF9D500ABCB30 /* DynamicFilteringExampleView.swift */,
 				2F70C39526CFFB0200ABCB30 /* FilteredList.swift */,
+				2F70C39726CFFE1700ABCB30 /* OneToManyExampleView.swift */,
 				2F70C37626CFEAA300ABCB30 /* Assets.xcassets */,
 				2F70C37B26CFEAA300ABCB30 /* Persistence.swift */,
 				2F70C37D26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld */,
@@ -173,13 +188,18 @@
 				2F70C38C26CFF16A00ABCB30 /* ConditionalSavingExampleView.swift in Sources */,
 				2F70C39426CFFA3100ABCB30 /* Singer+CoreDataProperties.swift in Sources */,
 				2F70C37C26CFEAA300ABCB30 /* Persistence.swift in Sources */,
+				2F70C39E26CFFEE600ABCB30 /* Candy+CoreDataProperties.swift in Sources */,
 				2F70C39326CFFA3100ABCB30 /* Singer+CoreDataClass.swift in Sources */,
 				2F70C39626CFFB0200ABCB30 /* FilteredList.swift in Sources */,
+				2F70C39F26CFFEE600ABCB30 /* Country+CoreDataClass.swift in Sources */,
 				2F70C38A26CFF15000ABCB30 /* ConstraintExampleView.swift in Sources */,
+				2F70C3A026CFFEE600ABCB30 /* Country+CoreDataProperties.swift in Sources */,
+				2F70C39826CFFE1700ABCB30 /* OneToManyExampleView.swift in Sources */,
 				2F70C37526CFEAA200ABCB30 /* ContentView.swift in Sources */,
 				2F70C39026CFF9D500ABCB30 /* DynamicFilteringExampleView.swift in Sources */,
 				2F70C37F26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld in Sources */,
 				2F70C38726CFECF200ABCB30 /* Movie+CoreDataClass.swift in Sources */,
+				2F70C39D26CFFEE600ABCB30 /* Candy+CoreDataClass.swift in Sources */,
 				2F70C38E26CFF80800ABCB30 /* FilteringExampleView.swift in Sources */,
 				2F70C38826CFECF200ABCB30 /* Movie+CoreDataProperties.swift in Sources */,
 				2F70C37326CFEAA200ABCB30 /* CoreDataProjectApp.swift in Sources */,
