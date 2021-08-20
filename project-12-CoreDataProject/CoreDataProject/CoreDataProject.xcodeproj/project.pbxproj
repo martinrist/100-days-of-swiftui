@@ -13,6 +13,8 @@
 		2F70C37A26CFEAA300ABCB30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F70C37926CFEAA300ABCB30 /* Preview Assets.xcassets */; };
 		2F70C37C26CFEAA300ABCB30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C37B26CFEAA300ABCB30 /* Persistence.swift */; };
 		2F70C37F26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C37D26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld */; };
+		2F70C38726CFECF200ABCB30 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C38526CFECF200ABCB30 /* Movie+CoreDataClass.swift */; };
+		2F70C38826CFECF200ABCB30 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C38626CFECF200ABCB30 /* Movie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2F70C37926CFEAA300ABCB30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F70C37B26CFEAA300ABCB30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2F70C37E26CFEAA300ABCB30 /* CoreDataProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataProject.xcdatamodel; sourceTree = "<group>"; };
+		2F70C38526CFECF200ABCB30 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F70C38626CFECF200ABCB30 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 		2F70C37126CFEAA200ABCB30 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				2F70C38526CFECF200ABCB30 /* Movie+CoreDataClass.swift */,
+				2F70C38626CFECF200ABCB30 /* Movie+CoreDataProperties.swift */,
 				2F70C37226CFEAA200ABCB30 /* CoreDataProjectApp.swift */,
 				2F70C37426CFEAA200ABCB30 /* ContentView.swift */,
 				2F70C37626CFEAA300ABCB30 /* Assets.xcassets */,
@@ -146,6 +152,8 @@
 				2F70C37C26CFEAA300ABCB30 /* Persistence.swift in Sources */,
 				2F70C37526CFEAA200ABCB30 /* ContentView.swift in Sources */,
 				2F70C37F26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld in Sources */,
+				2F70C38726CFECF200ABCB30 /* Movie+CoreDataClass.swift in Sources */,
+				2F70C38826CFECF200ABCB30 /* Movie+CoreDataProperties.swift in Sources */,
 				2F70C37326CFEAA200ABCB30 /* CoreDataProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
