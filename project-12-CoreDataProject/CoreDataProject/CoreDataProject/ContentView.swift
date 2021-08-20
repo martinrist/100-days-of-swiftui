@@ -18,6 +18,9 @@ struct ContentView: View {
         NavigationLink(destination: ConstraintExampleView()) {
           Text("Constraints")
         }
+        NavigationLink(destination: FilteringExampleView()) {
+          Text("Filtering with `NSPredicate`")
+        }
       }
       .navigationTitle("Core Data Examples")
     }
