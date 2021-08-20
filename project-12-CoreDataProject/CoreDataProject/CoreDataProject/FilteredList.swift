@@ -26,12 +26,13 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
   init(filterKey: String,
        filterValue: String,
        sortDescriptors: [NSSortDescriptor] = [],
+       predicate: String = "BEGINSWITH",
        @ViewBuilder content: @escaping (T) -> Content) {
 
     fetchRequest = FetchRequest<T>(
       entity: T.entity(),
       sortDescriptors: sortDescriptors,
-      predicate: NSPredicate(format: "%K BEGINSWITH %@",
+      predicate: NSPredicate(format: "%K \(predicate) %@",
                              filterKey,
                              filterValue))
     self.content = content
