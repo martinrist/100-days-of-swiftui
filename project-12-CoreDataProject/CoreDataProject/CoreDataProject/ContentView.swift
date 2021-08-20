@@ -9,16 +9,19 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-  @Environment(\.managedObjectContext) var moc
-
   var body: some View {
-    Button("Save") {
-      if moc.hasChanges {
-        try? moc.save()
+    NavigationView {
+      List {
+        NavigationLink(destination: ConditionalSavingExampleView()) {
+          Text("Conditional Saving")
+        }
+        NavigationLink(destination: ConstraintExampleView()) {
+          Text("Constraints")
+        }
       }
+      .navigationTitle("Core Data Examples")
     }
   }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
