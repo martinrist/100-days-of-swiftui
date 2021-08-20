@@ -18,6 +18,10 @@
 		2F70C38A26CFF15000ABCB30 /* ConstraintExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C38926CFF15000ABCB30 /* ConstraintExampleView.swift */; };
 		2F70C38C26CFF16A00ABCB30 /* ConditionalSavingExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C38B26CFF16A00ABCB30 /* ConditionalSavingExampleView.swift */; };
 		2F70C38E26CFF80800ABCB30 /* FilteringExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C38D26CFF80800ABCB30 /* FilteringExampleView.swift */; };
+		2F70C39026CFF9D500ABCB30 /* DynamicFilteringExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C38F26CFF9D500ABCB30 /* DynamicFilteringExampleView.swift */; };
+		2F70C39326CFFA3100ABCB30 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39126CFFA3100ABCB30 /* Singer+CoreDataClass.swift */; };
+		2F70C39426CFFA3100ABCB30 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39226CFFA3100ABCB30 /* Singer+CoreDataProperties.swift */; };
+		2F70C39626CFFB0200ABCB30 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70C39526CFFB0200ABCB30 /* FilteredList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		2F70C38926CFF15000ABCB30 /* ConstraintExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintExampleView.swift; sourceTree = "<group>"; };
 		2F70C38B26CFF16A00ABCB30 /* ConditionalSavingExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalSavingExampleView.swift; sourceTree = "<group>"; };
 		2F70C38D26CFF80800ABCB30 /* FilteringExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringExampleView.swift; sourceTree = "<group>"; };
+		2F70C38F26CFF9D500ABCB30 /* DynamicFilteringExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteringExampleView.swift; sourceTree = "<group>"; };
+		2F70C39126CFFA3100ABCB30 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F70C39226CFFA3100ABCB30 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F70C39526CFFB0200ABCB30 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,8 @@
 		2F70C37126CFEAA200ABCB30 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				2F70C39126CFFA3100ABCB30 /* Singer+CoreDataClass.swift */,
+				2F70C39226CFFA3100ABCB30 /* Singer+CoreDataProperties.swift */,
 				2F70C38526CFECF200ABCB30 /* Movie+CoreDataClass.swift */,
 				2F70C38626CFECF200ABCB30 /* Movie+CoreDataProperties.swift */,
 				2F70C37226CFEAA200ABCB30 /* CoreDataProjectApp.swift */,
@@ -72,6 +82,8 @@
 				2F70C38B26CFF16A00ABCB30 /* ConditionalSavingExampleView.swift */,
 				2F70C38926CFF15000ABCB30 /* ConstraintExampleView.swift */,
 				2F70C38D26CFF80800ABCB30 /* FilteringExampleView.swift */,
+				2F70C38F26CFF9D500ABCB30 /* DynamicFilteringExampleView.swift */,
+				2F70C39526CFFB0200ABCB30 /* FilteredList.swift */,
 				2F70C37626CFEAA300ABCB30 /* Assets.xcassets */,
 				2F70C37B26CFEAA300ABCB30 /* Persistence.swift */,
 				2F70C37D26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld */,
@@ -159,9 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F70C38C26CFF16A00ABCB30 /* ConditionalSavingExampleView.swift in Sources */,
+				2F70C39426CFFA3100ABCB30 /* Singer+CoreDataProperties.swift in Sources */,
 				2F70C37C26CFEAA300ABCB30 /* Persistence.swift in Sources */,
+				2F70C39326CFFA3100ABCB30 /* Singer+CoreDataClass.swift in Sources */,
+				2F70C39626CFFB0200ABCB30 /* FilteredList.swift in Sources */,
 				2F70C38A26CFF15000ABCB30 /* ConstraintExampleView.swift in Sources */,
 				2F70C37526CFEAA200ABCB30 /* ContentView.swift in Sources */,
+				2F70C39026CFF9D500ABCB30 /* DynamicFilteringExampleView.swift in Sources */,
 				2F70C37F26CFEAA300ABCB30 /* CoreDataProject.xcdatamodeld in Sources */,
 				2F70C38726CFECF200ABCB30 /* Movie+CoreDataClass.swift in Sources */,
 				2F70C38E26CFF80800ABCB30 /* FilteringExampleView.swift in Sources */,

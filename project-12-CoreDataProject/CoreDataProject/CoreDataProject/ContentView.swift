@@ -21,6 +21,9 @@ struct ContentView: View {
         NavigationLink(destination: FilteringExampleView()) {
           Text("Filtering with `NSPredicate`")
         }
+        NavigationLink(destination: DynamicFilteringExampleView()) {
+          Text("Dynamic Filtering")
+        }
       }
       .navigationTitle("Core Data Examples")
     }
