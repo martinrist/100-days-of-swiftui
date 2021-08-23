@@ -11,12 +11,27 @@ struct UserListView: View {
 
   @ObservedObject var model: Model
 
+  @State private var hideInactive = false
+
+  private var filteredUsers: [User] {
+    if hideInactive {
+      return model.users.filter { $0.isActive }
+    } else {
+      return model.users
+    }
+  }
+
+
   var body: some View {
     NavigationView {
-      List(model.users) { user in
+      List(filteredUsers) { user in
         UserListRow(user: user)
       }
       .navigationTitle("FriendFace")
+      .navigationBarItems(trailing:
+                            Button(hideInactive ? "Show Inactive" : "Hide Inactive") {
+        hideInactive.toggle()
+      })
     }
     .onAppear(perform: model.loadData)
   }
