@@ -27,7 +27,8 @@ class TestDataLoader: DataLoader {
            company: "AppsRUs",
            address: "907 Nelson Street, Cotopaxi, South Dakota, 5913",
            isActive: true,
-           about: "About Martin"
+           about: "About Martin",
+           tags: ["Tag 1", "Tag 2"]
           ),
 
       User(id: UUID(),
@@ -35,7 +36,8 @@ class TestDataLoader: DataLoader {
            company: "EvilCorp",
            address: "652 Gatling Place, Kieler, Arizona, 1705",
            isActive: false,
-           about: "About Sally"
+           about: "About Sally",
+           tags: ["Tag 1", "Tag 2"]
           ),
 
       User(id: UUID(),
@@ -43,7 +45,8 @@ class TestDataLoader: DataLoader {
            company: "David Inc",
            address: "581 Montrose Avenue, Why, Georgia, 5385",
            isActive: true,
-           about: "About David"
+           about: "About David",
+           tags: ["Tag 1", "Tag 2"]
           )
     ])
     )

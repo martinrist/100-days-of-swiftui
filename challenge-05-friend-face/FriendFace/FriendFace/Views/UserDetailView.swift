@@ -13,17 +13,24 @@ struct UserDetailView: View {
 
   var body: some View {
     GeometryReader { geom in
-      VStack(alignment: .center) {
-        UserIconView(userName: user.name)
-          .frame(width: geom.size.width / 3, height: geom.size
-                  .width / 3)
-        Text(user.about)
-          .padding(32)
-          .multilineTextAlignment(.center)
+      ScrollView {
+        VStack(alignment: .center) {
+          UserIconView(userName: user.name)
+            .frame(width: geom.size.width / 3, height: geom.size
+                    .width / 3)
 
-        Spacer()
+          Text(user.about)
+            .padding(32)
+            .multilineTextAlignment(.center)
+
+          VStack {
+            ForEach(user.tags, id: \.self) { tag in
+              UserTagView(tag: tag)
+            }
+          }.padding()
+        }
+        .padding()
       }
-      .padding()
     }
     .navigationTitle(user.name)
   }
@@ -40,7 +47,8 @@ struct UserDetailView_Previews: PreviewProvider {
       about:
       """
       Occaecat consequat elit aliquip magna laboris dolore laboris sunt officia adipisicing reprehenderit sunt. Do in proident consectetur labore. Laboris pariatur quis incididunt nostrud labore ad cillum veniam ipsum ullamco. Dolore laborum commodo veniam nisi. Eu ullamco cillum ex nostrud fugiat eu consequat enim cupidatat. Non incididunt fugiat cupidatat reprehenderit nostrud eiusmod eu sit minim do amet qui cupidatat. Elit aliquip nisi ea veniam proident dolore exercitation irure est deserunt.\r\n
-      """
+      """,
+      tags: ["Tag 1", "Tag 2", "Tag 3"]
     )
     UserDetailView(user: testUser)
   }

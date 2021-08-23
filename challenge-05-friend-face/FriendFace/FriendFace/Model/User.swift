@@ -14,4 +14,5 @@ struct User: Codable, Identifiable {
   let address: String
   let isActive: Bool
   let about: String
+  let tags: [String]
 }
