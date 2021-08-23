@@ -12,8 +12,10 @@ struct User: Codable, Identifiable {
   let name: String
   let company: String
   let address: String
+  let email: String
   let isActive: Bool
   let about: String
   let tags: [String]
   let age: Int
+  let registered: Date
 }

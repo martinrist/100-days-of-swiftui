@@ -26,30 +26,36 @@ class TestDataLoader: DataLoader {
            name: "Martin",
            company: "AppsRUs",
            address: "907 Nelson Street, Cotopaxi, South Dakota, 5913",
+           email: "martin.smith@yahoo.com",
            isActive: true,
            about: "About Martin",
            tags: ["Tag 1", "Tag 2"],
-           age: 32
+           age: 32,
+           registered: Date()
           ),
 
       User(id: UUID(),
            name: "Sally",
            company: "EvilCorp",
            address: "652 Gatling Place, Kieler, Arizona, 1705",
+           email: "sally.smythe@gmail.com",
            isActive: false,
            about: "About Sally",
            tags: ["Tag 1", "Tag 2"],
-           age: 18
+           age: 18,
+           registered: Date()
           ),
 
       User(id: UUID(),
            name: "David",
            company: "David Inc",
            address: "581 Montrose Avenue, Why, Georgia, 5385",
+           email: "david.williams@davidinc.com",
            isActive: true,
            about: "About David",
            tags: ["Tag 1", "Tag 2"],
-           age: 62
+           age: 62,
+           registered: Date()
           )
     ])
     )
@@ -79,7 +85,9 @@ class NetworkDataLoader: DataLoader {
       }
 
       do {
-        let users = try JSONDecoder().decode([User].self, from: data)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let users = try decoder.decode([User].self, from: data)
         completion(.success(users))
       } catch {
         completion(.failure(.invalidData(message: error)))
