@@ -14,11 +14,33 @@ struct UserListView: View {
   var body: some View {
     NavigationView {
       List(model.users) { user in
-        Text(user.name)
+        UserListRow(user: user)
       }
       .navigationTitle("FriendFace")
     }
     .onAppear(perform: model.loadData)
+  }
+}
+
+struct UserListRow: View {
+  let user: User
+
+  var body: some View {
+    VStack(alignment: .leading) {
+      Text(user.name)
+        .padding(.bottom, 2)
+      Group {
+        HStack {
+          Image(systemName: "map")
+          Text(user.address)
+        }
+        HStack {
+          Image(systemName: "network")
+          Text(user.company)
+        }
+      }
+      .font(.caption)
+    }
   }
 }
 

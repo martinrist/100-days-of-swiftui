@@ -22,9 +22,20 @@ protocol DataLoader {
 class TestDataLoader: DataLoader {
   func loadData(completion: @escaping (Result<[User], DataLoadError>) -> Void) {
     completion(.success([
-      User(id: UUID(), name: "Martin"),
-      User(id: UUID(), name: "Sally"),
-      User(id: UUID(), name: "David")
+      User(id: UUID(),
+           name: "Martin",
+           company: "AppsRUs",
+           address: "907 Nelson Street, Cotopaxi, South Dakota, 5913"),
+
+      User(id: UUID(),
+           name: "Sally",
+           company: "EvilCorp",
+           address: "652 Gatling Place, Kieler, Arizona, 1705"),
+
+      User(id: UUID(),
+           name: "David",
+           company: "David Inc",
+           address: "581 Montrose Avenue, Why, Georgia, 5385")
     ])
     )
   }
