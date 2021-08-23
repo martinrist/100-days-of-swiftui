@@ -18,15 +18,15 @@ struct UserDetailView: View {
         HStack(alignment: .center) {
           Spacer()
           UserIconView(userName: user.name)
-            .frame(width: geom.size.width / 3, height: geom.size
-                    .width / 3)
-            .padding(.top, 16)
+            .frame(width: geom.size.width / 3, height: geom.size.width / 3)
+            .padding([.top, .bottom], 16)
           Spacer()
         }
 
         Text(user.about)
           .multilineTextAlignment(.center)
           .lineLimit(nil)
+          .padding(.top, 8)
 
         Section {
           UserInformationView(user: user)
@@ -52,6 +52,7 @@ struct UserDetailView: View {
           Text("Tags")
         }
       }
+      .listStyle(.insetGrouped)
     }
     .navigationTitle(user.name)
   }

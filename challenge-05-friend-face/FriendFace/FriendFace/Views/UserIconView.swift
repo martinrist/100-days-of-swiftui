@@ -22,7 +22,7 @@ struct UserIconView: View {
           .fill(.gray)
 
         Text(initials)
-          .padding(geom.size.width / 10)
+          .padding(geom.size.width / 6)
           .font(.system(size: 1000))
           .minimumScaleFactor(0.001)
           .foregroundColor(.white)
