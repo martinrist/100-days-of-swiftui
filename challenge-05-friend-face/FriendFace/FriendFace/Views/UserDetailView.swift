@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserDetailView: View {
 
+  let allUsers: [User]
   let user: User
 
   var body: some View {
@@ -34,7 +35,7 @@ struct UserDetailView: View {
         }
 
         Section {
-          FriendListView(friends: user.friends)
+          FriendListView(allUsers: allUsers, friends: user.friends)
         } header: {
           Text("Friends")
         }
@@ -101,11 +102,22 @@ struct UserInformationView: View {
 }
 
 struct FriendListView: View {
+  let allUsers: [User]
   let friends: [Friend]
+
+  func user(for friend: Friend) -> User? {
+    allUsers.first { $0.id == friend.id }
+  }
 
   var body: some View {
     ForEach(friends) { friend in
-      Text(friend.name)
+      if let user = user(for: friend) {
+        NavigationLink(destination: UserDetailView(allUsers: allUsers, user: user)) {
+          Text(friend.name)
+        }
+      } else {
+        Text(friend.name)
+      }
     }
   }
 }
@@ -128,6 +140,6 @@ struct UserDetailView_Previews: PreviewProvider {
       registered: Date(),
       friends: []
     )
-    UserDetailView(user: testUser)
+    UserDetailView(allUsers: [testUser], user: testUser)
   }
 }

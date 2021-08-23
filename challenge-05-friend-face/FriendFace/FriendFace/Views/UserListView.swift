@@ -21,11 +21,10 @@ struct UserListView: View {
     }
   }
 
-
   var body: some View {
     NavigationView {
       List(filteredUsers) { user in
-        UserListRow(user: user)
+        UserListRow(allUsers: model.users, user: user)
       }
       .navigationTitle("FriendFace")
       .navigationBarItems(trailing:
@@ -38,10 +37,11 @@ struct UserListView: View {
 }
 
 struct UserListRow: View {
+  let allUsers: [User]
   let user: User
 
   var body: some View {
-    NavigationLink(destination: UserDetailView(user: user)) {
+    NavigationLink(destination: UserDetailView(allUsers: allUsers, user: user)) {
 
       HStack {
 
