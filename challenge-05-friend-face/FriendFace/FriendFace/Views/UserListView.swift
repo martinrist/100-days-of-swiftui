@@ -41,22 +41,25 @@ struct UserListRow: View {
   let user: User
 
   var body: some View {
-    VStack(alignment: .leading) {
-      Text(user.name)
-        .padding(.bottom, 2)
-      Group {
-        HStack {
-          Image(systemName: "map")
-          Text(user.address)
+    NavigationLink(destination: UserDetailView(user: user)) {
+
+      VStack(alignment: .leading) {
+        Text(user.name)
+          .padding(.bottom, 2)
+        Group {
+          HStack {
+            Image(systemName: "map")
+            Text(user.address)
+          }
+          HStack {
+            Image(systemName: "network")
+            Text(user.company)
+          }
         }
-        HStack {
-          Image(systemName: "network")
-          Text(user.company)
-        }
+        .font(.caption)
       }
-      .font(.caption)
+      .foregroundColor(user.isActive ? .primary : .secondary)
     }
-    .foregroundColor(user.isActive ? .primary : .secondary)
   }
 }
 

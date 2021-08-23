@@ -14,6 +14,8 @@
 		2F92879726D3E7B2008FA082 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92879626D3E7B2008FA082 /* Model.swift */; };
 		2F92879926D3EC4D008FA082 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92879826D3EC4D008FA082 /* DataLoader.swift */; };
 		2F92879B26D3F2CE008FA082 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92879A26D3F2CE008FA082 /* User.swift */; };
+		2F9F4F9B26D3FC0800A7F12E /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F4F9A26D3FC0800A7F12E /* UserDetailView.swift */; };
+		2F9F4F9D26D3FDCA00A7F12E /* UserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F4F9C26D3FDCA00A7F12E /* UserIconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		2F92879626D3E7B2008FA082 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2F92879826D3EC4D008FA082 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		2F92879A26D3F2CE008FA082 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2F9F4F9A26D3FC0800A7F12E /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		2F9F4F9C26D3FDCA00A7F12E /* UserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				2F92878826D3E407008FA082 /* UserListView.swift */,
+				2F9F4F9A26D3FC0800A7F12E /* UserDetailView.swift */,
+				2F9F4F9C26D3FDCA00A7F12E /* UserIconView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 				2F92879726D3E7B2008FA082 /* Model.swift in Sources */,
 				2F92878926D3E407008FA082 /* UserListView.swift in Sources */,
 				2F92879B26D3F2CE008FA082 /* User.swift in Sources */,
+				2F9F4F9B26D3FC0800A7F12E /* UserDetailView.swift in Sources */,
+				2F9F4F9D26D3FDCA00A7F12E /* UserIconView.swift in Sources */,
 				2F92878726D3E407008FA082 /* FriendFaceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

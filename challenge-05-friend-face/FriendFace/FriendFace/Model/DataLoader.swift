@@ -26,21 +26,24 @@ class TestDataLoader: DataLoader {
            name: "Martin",
            company: "AppsRUs",
            address: "907 Nelson Street, Cotopaxi, South Dakota, 5913",
-           isActive: true
+           isActive: true,
+           about: "About Martin"
           ),
 
       User(id: UUID(),
            name: "Sally",
            company: "EvilCorp",
            address: "652 Gatling Place, Kieler, Arizona, 1705",
-           isActive: false
+           isActive: false,
+           about: "About Sally"
           ),
 
       User(id: UUID(),
            name: "David",
            company: "David Inc",
            address: "581 Montrose Avenue, Why, Georgia, 5385",
-           isActive: true
+           isActive: true,
+           about: "About David"
           )
     ])
     )
