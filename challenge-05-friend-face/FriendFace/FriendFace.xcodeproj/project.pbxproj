@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2F92878726D3E407008FA082 /* FriendFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92878626D3E407008FA082 /* FriendFaceApp.swift */; };
-		2F92878926D3E407008FA082 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92878826D3E407008FA082 /* ContentView.swift */; };
+		2F92878926D3E407008FA082 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92878826D3E407008FA082 /* UserListView.swift */; };
 		2F92878B26D3E407008FA082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F92878A26D3E407008FA082 /* Assets.xcassets */; };
 		2F92878E26D3E407008FA082 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F92878D26D3E407008FA082 /* Preview Assets.xcassets */; };
+		2F92879726D3E7B2008FA082 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92879626D3E7B2008FA082 /* Model.swift */; };
+		2F92879926D3EC4D008FA082 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92879826D3EC4D008FA082 /* DataLoader.swift */; };
+		2F92879B26D3F2CE008FA082 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92879A26D3F2CE008FA082 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F92878326D3E407008FA082 /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F92878626D3E407008FA082 /* FriendFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceApp.swift; sourceTree = "<group>"; };
-		2F92878826D3E407008FA082 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F92878826D3E407008FA082 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		2F92878A26D3E407008FA082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F92878D26D3E407008FA082 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F92879626D3E7B2008FA082 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2F92879826D3EC4D008FA082 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		2F92879A26D3F2CE008FA082 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				2F92878626D3E407008FA082 /* FriendFaceApp.swift */,
-				2F92878826D3E407008FA082 /* ContentView.swift */,
+				2F92879426D3E734008FA082 /* Model */,
+				2F92879526D3E73D008FA082 /* Views */,
 				2F92878A26D3E407008FA082 /* Assets.xcassets */,
 				2F92878C26D3E407008FA082 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				2F92878D26D3E407008FA082 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2F92879426D3E734008FA082 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F92879626D3E7B2008FA082 /* Model.swift */,
+				2F92879826D3EC4D008FA082 /* DataLoader.swift */,
+				2F92879A26D3F2CE008FA082 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F92879526D3E73D008FA082 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F92878826D3E407008FA082 /* UserListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F92878926D3E407008FA082 /* ContentView.swift in Sources */,
+				2F92879926D3EC4D008FA082 /* DataLoader.swift in Sources */,
+				2F92879726D3E7B2008FA082 /* Model.swift in Sources */,
+				2F92878926D3E407008FA082 /* UserListView.swift in Sources */,
+				2F92879B26D3F2CE008FA082 /* User.swift in Sources */,
 				2F92878726D3E407008FA082 /* FriendFaceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
