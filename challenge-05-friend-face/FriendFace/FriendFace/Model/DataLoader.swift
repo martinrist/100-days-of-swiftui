@@ -28,7 +28,8 @@ class TestDataLoader: DataLoader {
            address: "907 Nelson Street, Cotopaxi, South Dakota, 5913",
            isActive: true,
            about: "About Martin",
-           tags: ["Tag 1", "Tag 2"]
+           tags: ["Tag 1", "Tag 2"],
+           age: 32
           ),
 
       User(id: UUID(),
@@ -37,7 +38,8 @@ class TestDataLoader: DataLoader {
            address: "652 Gatling Place, Kieler, Arizona, 1705",
            isActive: false,
            about: "About Sally",
-           tags: ["Tag 1", "Tag 2"]
+           tags: ["Tag 1", "Tag 2"],
+           age: 18
           ),
 
       User(id: UUID(),
@@ -46,7 +48,8 @@ class TestDataLoader: DataLoader {
            address: "581 Montrose Avenue, Why, Georgia, 5385",
            isActive: true,
            about: "About David",
-           tags: ["Tag 1", "Tag 2"]
+           tags: ["Tag 1", "Tag 2"],
+           age: 62
           )
     ])
     )

@@ -15,4 +15,5 @@ struct User: Codable, Identifiable {
   let isActive: Bool
   let about: String
   let tags: [String]
+  let age: Int
 }
