@@ -18,4 +18,5 @@ struct User: Codable, Identifiable {
   let tags: [String]
   let age: Int
   let registered: Date
+  let friends: [Friend]
 }

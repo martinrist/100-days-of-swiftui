@@ -31,7 +31,8 @@ class TestDataLoader: DataLoader {
            about: "About Martin",
            tags: ["Tag 1", "Tag 2"],
            age: 32,
-           registered: Date()
+           registered: Date(),
+           friends: []
           ),
 
       User(id: UUID(),
@@ -43,7 +44,8 @@ class TestDataLoader: DataLoader {
            about: "About Sally",
            tags: ["Tag 1", "Tag 2"],
            age: 18,
-           registered: Date()
+           registered: Date(),
+           friends: []
           ),
 
       User(id: UUID(),
@@ -55,7 +57,8 @@ class TestDataLoader: DataLoader {
            about: "About David",
            tags: ["Tag 1", "Tag 2"],
            age: 62,
-           registered: Date()
+           registered: Date(),
+           friends: []
           )
     ])
     )

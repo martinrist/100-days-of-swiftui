@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F3D7B2C26D402CD002DBFDE /* UserTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7B2B26D402CD002DBFDE /* UserTagView.swift */; };
+		2F3D7B2E26D40C24002DBFDE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7B2D26D40C24002DBFDE /* Friend.swift */; };
 		2F92878726D3E407008FA082 /* FriendFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92878626D3E407008FA082 /* FriendFaceApp.swift */; };
 		2F92878926D3E407008FA082 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F92878826D3E407008FA082 /* UserListView.swift */; };
 		2F92878B26D3E407008FA082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F92878A26D3E407008FA082 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2F3D7B2B26D402CD002DBFDE /* UserTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTagView.swift; sourceTree = "<group>"; };
+		2F3D7B2D26D40C24002DBFDE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		2F92878326D3E407008FA082 /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F92878626D3E407008FA082 /* FriendFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceApp.swift; sourceTree = "<group>"; };
 		2F92878826D3E407008FA082 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				2F92879626D3E7B2008FA082 /* Model.swift */,
 				2F92879826D3EC4D008FA082 /* DataLoader.swift */,
 				2F92879A26D3F2CE008FA082 /* User.swift */,
+				2F3D7B2D26D40C24002DBFDE /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				2F92878926D3E407008FA082 /* UserListView.swift in Sources */,
 				2F92879B26D3F2CE008FA082 /* User.swift in Sources */,
 				2F9F4F9B26D3FC0800A7F12E /* UserDetailView.swift in Sources */,
+				2F3D7B2E26D40C24002DBFDE /* Friend.swift in Sources */,
 				2F9F4F9D26D3FDCA00A7F12E /* UserIconView.swift in Sources */,
 				2F92878726D3E407008FA082 /* FriendFaceApp.swift in Sources */,
 			);

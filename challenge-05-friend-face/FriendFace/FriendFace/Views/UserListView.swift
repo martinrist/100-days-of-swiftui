@@ -43,20 +43,28 @@ struct UserListRow: View {
   var body: some View {
     NavigationLink(destination: UserDetailView(user: user)) {
 
-      VStack(alignment: .leading) {
-        Text(user.name)
-          .padding(.bottom, 2)
-        Group {
-          HStack {
-            Image(systemName: "map")
-            Text(user.address)
+      HStack {
+
+        VStack(alignment: .leading) {
+          Text(user.name)
+            .padding(.bottom, 2)
+          Group {
+            HStack {
+              Image(systemName: "map")
+              Text(user.address)
+            }
+            HStack {
+              Image(systemName: "network")
+              Text(user.company)
+            }
           }
-          HStack {
-            Image(systemName: "network")
-            Text(user.company)
-          }
+          .font(.caption)
         }
-        .font(.caption)
+
+        Spacer(minLength: 10)
+
+        Image(systemName: "person.2")
+        Text("\(user.friends.count)")
       }
       .foregroundColor(user.isActive ? .primary : .secondary)
     }

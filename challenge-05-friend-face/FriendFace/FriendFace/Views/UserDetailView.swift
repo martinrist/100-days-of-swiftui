@@ -88,7 +88,8 @@ struct UserDetailView_Previews: PreviewProvider {
       """,
       tags: ["Tag 1", "Tag 2", "Tag 3"],
       age: 23,
-      registered: Date()
+      registered: Date(),
+      friends: []
     )
     UserDetailView(user: testUser)
   }
