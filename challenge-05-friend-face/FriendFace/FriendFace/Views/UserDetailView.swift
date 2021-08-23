@@ -11,6 +11,54 @@ struct UserDetailView: View {
 
   let user: User
 
+  var body: some View {
+    GeometryReader { geom in
+      List {
+        HStack(alignment: .center) {
+          Spacer()
+          UserIconView(userName: user.name)
+            .frame(width: geom.size.width / 3, height: geom.size
+                    .width / 3)
+            .padding(.top, 16)
+          Spacer()
+        }
+
+        Text(user.about)
+          .multilineTextAlignment(.center)
+          .lineLimit(nil)
+
+        Section {
+          UserInformationView(user: user)
+        } header: {
+          Text("User Information")
+        }
+
+        Section {
+          FriendListView(friends: user.friends)
+        } header: {
+          Text("Friends")
+        }
+
+        Section {
+          ForEach(user.tags, id: \.self) { tag in
+            HStack {
+              Spacer()
+              UserTagView(tag: tag)
+              Spacer()
+            }
+          }
+        } header: {
+          Text("Tags")
+        }
+      }
+    }
+    .navigationTitle(user.name)
+  }
+}
+
+struct UserInformationView: View {
+  let user: User
+
   var dateFormatter: DateFormatter {
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
@@ -23,53 +71,42 @@ struct UserDetailView: View {
   }
 
   var body: some View {
-    GeometryReader { geom in
-      ScrollView {
-          UserIconView(userName: user.name)
-            .frame(width: geom.size.width / 3, height: geom.size
-                    .width / 3)
-            .padding(.top, 16)
+    Group {
+      HStack {
+        Image(systemName: "network")
+        Text(user.company)
+      }
 
-          Text(user.about)
-            .padding(32)
-            .multilineTextAlignment(.center)
+      HStack {
+        Image(systemName: "map")
+        Text(user.address)
+      }
 
-          VStack(alignment: .leading, spacing: 4) {
-            HStack {
-              Image(systemName: "network")
-              Text(user.company)
-            }
+      HStack {
+        Image(systemName: "envelope")
+        Text(user.email)
+      }
 
-            HStack {
-              Image(systemName: "map")
-              Text(user.address)
-            }
+      HStack {
+        Image(systemName: "gift")
+        Text("\(user.age)")
+      }
 
-            HStack {
-              Image(systemName: "envelope")
-              Text(user.email)
-            }
-
-            HStack {
-              Image(systemName: "gift")
-              Text("\(user.age)")
-            }
-
-            HStack {
-              Image(systemName: "calendar")
-              Text(formattedRegistrationDate)
-            }
-            
-          }
-
-          VStack {
-            ForEach(user.tags, id: \.self) { tag in
-              UserTagView(tag: tag)
-            }
-          }.padding()
-        }
+      HStack {
+        Image(systemName: "calendar")
+        Text(formattedRegistrationDate)
+      }
     }
-    .navigationTitle(user.name)
+  }
+}
+
+struct FriendListView: View {
+  let friends: [Friend]
+
+  var body: some View {
+    ForEach(friends) { friend in
+      Text(friend.name)
+    }
   }
 }
 
