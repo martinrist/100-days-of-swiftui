@@ -25,17 +25,23 @@ class TestDataLoader: DataLoader {
       User(id: UUID(),
            name: "Martin",
            company: "AppsRUs",
-           address: "907 Nelson Street, Cotopaxi, South Dakota, 5913"),
+           address: "907 Nelson Street, Cotopaxi, South Dakota, 5913",
+           isActive: true
+          ),
 
       User(id: UUID(),
            name: "Sally",
            company: "EvilCorp",
-           address: "652 Gatling Place, Kieler, Arizona, 1705"),
+           address: "652 Gatling Place, Kieler, Arizona, 1705",
+           isActive: false
+          ),
 
       User(id: UUID(),
            name: "David",
            company: "David Inc",
-           address: "581 Montrose Avenue, Why, Georgia, 5385")
+           address: "581 Montrose Avenue, Why, Georgia, 5385",
+           isActive: true
+          )
     ])
     )
   }

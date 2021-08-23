@@ -41,6 +41,7 @@ struct UserListRow: View {
       }
       .font(.caption)
     }
+    .foregroundColor(user.isActive ? .primary : .secondary)
   }
 }
 

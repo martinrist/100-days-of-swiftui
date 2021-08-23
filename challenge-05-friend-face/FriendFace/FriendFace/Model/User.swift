@@ -12,4 +12,5 @@ struct User: Codable, Identifiable {
   let name: String
   let company: String
   let address: String
+  let isActive: Bool
 }
