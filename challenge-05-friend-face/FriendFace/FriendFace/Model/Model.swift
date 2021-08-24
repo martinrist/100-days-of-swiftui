@@ -12,6 +12,7 @@ class Model: ObservableObject {
   var dataLoader: DataLoader
 
   @Published var users = [User]()
+  @Published var error: DataLoadError?
 
   init(dataLoader: DataLoader = NetworkDataLoader()) {
     self.dataLoader = dataLoader
@@ -22,13 +23,16 @@ class Model: ObservableObject {
       switch result {
         case .success(let users):
         DispatchQueue.main.async {
+          self.error = nil
           self.users = users
         }
         case .failure(let error):
-          // TODO: Handle error properly
+        DispatchQueue.main.async {
           print("Error loading data: \(error.localizedDescription)")
+          self.error = error
         }
       }
     }
+  }
 }
 

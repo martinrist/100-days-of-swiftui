@@ -7,7 +7,33 @@
 
 import Foundation
 
-enum DataLoadError: Error {
+enum DataLoadError: Error, Identifiable {
+  var id: String {
+    switch self {
+    case .invalidResponse:
+      return "invalidResponse"
+    case .httpError(let code):
+      return "httpError: \(code)"
+    case .noData:
+      return "noData"
+    case .invalidData(let message):
+      return "invalidData: \(message)"
+    }
+  }
+
+  var message: String {
+    switch self {
+    case .invalidResponse:
+      return "An invalid response was received from the server"
+    case .httpError(let code):
+      return "Error cdoe \(code) was returned from the server"
+    case .noData:
+      return "Failed to retrieve any data from the server"
+    case .invalidData:
+      return "Invalid data was returned from the server"
+    }
+  }
+
   case invalidResponse
   case httpError(code: Int)
   case noData

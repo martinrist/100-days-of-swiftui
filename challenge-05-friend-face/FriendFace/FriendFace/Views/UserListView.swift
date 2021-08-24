@@ -32,6 +32,11 @@ struct UserListView: View {
         hideInactive.toggle()
       })
     }
+    .alert(item: $model.error) { item in
+      Alert(title: Text("An error occurred"),
+            message: Text(item.message),
+            dismissButton: .default(Text("Ok")))
+    }
     .onAppear(perform: model.loadData)
   }
 }
