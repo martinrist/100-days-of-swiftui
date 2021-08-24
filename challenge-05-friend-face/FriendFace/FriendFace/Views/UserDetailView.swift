@@ -22,6 +22,7 @@ struct UserDetailView: View {
             .padding([.top, .bottom], 16)
           Spacer()
         }
+        .accessibilityHidden(true)
 
         Text(user.about)
           .multilineTextAlignment(.center)
@@ -78,26 +79,36 @@ struct UserInformationView: View {
         Image(systemName: "network")
         Text(user.company)
       }
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel("Employer: \(user.company)")
 
       HStack {
         Image(systemName: "map")
         Text(user.address)
       }
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel("Address: \(user.address)")
 
       HStack {
         Image(systemName: "envelope")
         Text(user.email)
       }
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel("Email: \(user.email)")
 
       HStack {
         Image(systemName: "gift")
         Text("\(user.age)")
       }
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel("Age: \(user.age)")
 
       HStack {
         Image(systemName: "calendar")
         Text(formattedRegistrationDate)
       }
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel("Registration Date: \(formattedRegistrationDate)")
     }
   }
 }

@@ -62,6 +62,7 @@ struct UserListRow: View {
               Image(systemName: "network")
               Text(user.company)
             }
+            .accessibilityLabel("Works for \(user.company)")
           }
           .font(.caption)
         }
@@ -70,7 +71,9 @@ struct UserListRow: View {
 
         Image(systemName: "person.2")
         Text("\(user.friends.count)")
+          .accessibilityLabel("\(user.friends.count) friends ")
       }
+      .accessibilityElement(children: .combine)
       .foregroundColor(user.isActive ? .primary : .secondary)
     }
   }
