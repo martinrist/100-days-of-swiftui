@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F710D8C26D6CB0D0062A8D0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F710D8B26D6CB0D0062A8D0 /* ImagePicker.swift */; };
 		2FB3719726D579C700A8F311 /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3719626D579C700A8F311 /* InstafilterApp.swift */; };
 		2FB3719926D579C700A8F311 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3719826D579C700A8F311 /* ContentView.swift */; };
 		2FB3719B26D579C700A8F311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3719A26D579C700A8F311 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F710D8B26D6CB0D0062A8D0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2FB3719326D579C700A8F311 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB3719626D579C700A8F311 /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
 		2FB3719826D579C700A8F311 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				2FB3719626D579C700A8F311 /* InstafilterApp.swift */,
 				2FB3719826D579C700A8F311 /* ContentView.swift */,
+				2F710D8B26D6CB0D0062A8D0 /* ImagePicker.swift */,
 				2FB3719A26D579C700A8F311 /* Assets.xcassets */,
 				2FB3719C26D579C700A8F311 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F710D8C26D6CB0D0062A8D0 /* ImagePicker.swift in Sources */,
 				2FB3719926D579C700A8F311 /* ContentView.swift in Sources */,
 				2FB3719726D579C700A8F311 /* InstafilterApp.swift in Sources */,
 			);
