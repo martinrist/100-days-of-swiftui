@@ -14,6 +14,7 @@ struct ContentView: View {
   @State private var inputImage: UIImage?
 
   @State private var filterIntensity = 0.5
+  @State private var filterRadius = 0.5
   @State private var showingImagePicker = false
   @State private var showingFilterSheet = false
   @State private var showingErrorAlert = false
@@ -32,6 +33,15 @@ struct ContentView: View {
       },
       set: {
         filterIntensity = $0
+        applyProcessing()
+      })
+
+    let radius = Binding<Double>(
+      get: {
+        filterRadius
+      },
+      set: {
+        filterRadius = $0
         applyProcessing()
       })
 
@@ -58,6 +68,12 @@ struct ContentView: View {
         HStack {
           Text("Intensity")
           Slider(value: intensity)
+        }
+        .padding(.vertical)
+
+        HStack {
+          Text("Radius")
+          Slider(value: radius)
         }
         .padding(.vertical)
 
@@ -126,7 +142,7 @@ struct ContentView: View {
       currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
     }
     if inputKeys.contains(kCIInputRadiusKey) {
-      currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey)
+      currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey)
     }
     if inputKeys.contains(kCIInputScaleKey) {
       currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey)
