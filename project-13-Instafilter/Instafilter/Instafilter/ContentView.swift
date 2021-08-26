@@ -16,6 +16,7 @@ struct ContentView: View {
   @State private var filterIntensity = 0.5
   @State private var showingImagePicker = false
   @State private var showingFilterSheet = false
+  @State private var showingErrorAlert = false
 
   @State private var processedImage: UIImage?
 
@@ -68,6 +69,11 @@ struct ContentView: View {
           Spacer()
 
           Button("Save") {
+            guard let _ = inputImage else {
+              showingErrorAlert = true
+              return
+            }
+
             guard let processedImage = processedImage else { return }
             let imageSaver = ImageSaver()
             imageSaver.successHandler = {
@@ -77,6 +83,11 @@ struct ContentView: View {
               print("Oops: \($0.localizedDescription)")
             }
             imageSaver.writeToPhotoAlbum(image: processedImage)
+          }
+          .alert(isPresented: $showingErrorAlert) {
+            Alert(title: Text("Please select an image"),
+                  message: Text("Please select an input and try again"),
+                  dismissButton: .default(Text("Ok")))
           }
         }
       }
