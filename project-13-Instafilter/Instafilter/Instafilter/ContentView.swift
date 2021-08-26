@@ -62,7 +62,8 @@ struct ContentView: View {
         .padding(.vertical)
 
         HStack {
-          Button("Change filter") {
+          Button(
+            (currentFilter.attributes[kCIAttributeFilterDisplayName] as? String) ?? "Change Filter") {
             showingFilterSheet = true
           }
 
