@@ -7,28 +7,27 @@
 
 import SwiftUI
 
-struct User: Identifiable, Comparable {
-  static func < (lhs: User, rhs: User) -> Bool {
-    lhs.lastName < rhs.lastName
+struct ContentView: View {
+
+  func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
   }
 
-  let id = UUID()
-  let firstName: String
-  let lastName: String
-}
-
-
-struct ContentView: View {
-  let users = [
-    User(firstName: "Arnold", lastName: "Rimmer"),
-    User(firstName: "Kristine", lastName: "Kochanski"),
-    User(firstName: "David", lastName: "Lister")
-  ].sorted()
-
   var body: some View {
-    List(users) { user in
-      Text("\(user.lastName), \(user.firstName)")
-    }
+    Text("Hello, world!")
+      .onTapGesture {
+        let str = "Test Message"
+        let url = getDocumentsDirectory().appendingPathComponent("message.txt")
+
+        do {
+          try str.write(to: url, atomically: true, encoding: .utf8)
+          let input = try String(contentsOf: url)
+          print(input)
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
   }
 }
 
