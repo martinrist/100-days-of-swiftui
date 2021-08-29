@@ -13,6 +13,7 @@
 		2F6F8B8126D92C620049C5AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F8B8026D92C620049C5AE /* Preview Assets.xcassets */; };
 		2F80BE3A26DBCD9A0070AC59 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80BE3926DBCD9A0070AC59 /* MKPointAnnotation-ObservableObject.swift */; };
 		2F80BE3C26DBCE090070AC59 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80BE3B26DBCE090070AC59 /* EditView.swift */; };
+		2F80BE3E26DBCF9F0070AC59 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80BE3D26DBCF9F0070AC59 /* Result.swift */; };
 		2FCCA8E826D931A200A2A72E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCA8E726D931A200A2A72E /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		2F6F8B8026D92C620049C5AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F80BE3926DBCD9A0070AC59 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		2F80BE3B26DBCE090070AC59 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		2F80BE3D26DBCF9F0070AC59 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2FCCA8E726D931A200A2A72E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 				2F80BE3B26DBCE090070AC59 /* EditView.swift */,
 				2FCCA8E726D931A200A2A72E /* MapView.swift */,
 				2F80BE3926DBCD9A0070AC59 /* MKPointAnnotation-ObservableObject.swift */,
+				2F80BE3D26DBCF9F0070AC59 /* Result.swift */,
 				2F6F8B7D26D92C620049C5AE /* Assets.xcassets */,
 				2F6F8B7F26D92C620049C5AE /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F80BE3E26DBCF9F0070AC59 /* Result.swift in Sources */,
 				2F6F8B7C26D92C620049C5AE /* ContentView.swift in Sources */,
 				2F80BE3C26DBCE090070AC59 /* EditView.swift in Sources */,
 				2F80BE3A26DBCD9A0070AC59 /* MKPointAnnotation-ObservableObject.swift in Sources */,
