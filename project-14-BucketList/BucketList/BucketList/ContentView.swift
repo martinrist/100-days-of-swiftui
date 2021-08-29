@@ -17,6 +17,7 @@ struct ContentView: View {
   @State private var showingPlaceDetails = false
   @State private var showingEditScreen = false
   @State private var isUnlocked = false
+  @State private var showingAuthErrorAlert = false
 
   var body: some View {
     ZStack {
@@ -55,6 +56,14 @@ struct ContentView: View {
             .padding(.trailing)
           }
         }
+        .alert(isPresented: $showingPlaceDetails) {
+          Alert(title: Text(selectedPlace?.title ?? "Unknown"),
+                message: Text(selectedPlace?.subtitle ?? "Missing place information"),
+                primaryButton: .default(Text("OK")),
+                secondaryButton: .default(Text("Edit")) {
+            showingEditScreen = true
+          })
+        }
       } else {
         Button("Unlock Places") {
           authenticate()
@@ -63,15 +72,12 @@ struct ContentView: View {
         .background(Color.blue)
         .foregroundColor(.white)
         .clipShape(Capsule())
+        .alert(isPresented: $showingAuthErrorAlert) {
+          Alert(title: Text("Authentication Error"),
+                message: Text("Please try again"),
+                dismissButton: .default(Text("OK")))
+        }
       }
-    }
-    .alert(isPresented: $showingPlaceDetails) {
-      Alert(title: Text(selectedPlace?.title ?? "Unknown"),
-            message: Text(selectedPlace?.subtitle ?? "Missing place information"),
-            primaryButton: .default(Text("OK")),
-            secondaryButton: .default(Text("Edit")) {
-        showingEditScreen = true
-      })
     }
     .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
       if let selectedPlace = selectedPlace {
@@ -117,7 +123,7 @@ struct ContentView: View {
           if success {
             isUnlocked = true
           } else {
-            //error
+            showingAuthErrorAlert = true
           }
         }
       }
