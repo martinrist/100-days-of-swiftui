@@ -33,6 +33,7 @@ struct AccessibilityLabelExampleView: View {
       .accessibilityLabel(labels[selectedPicture])
       .accessibilityAddTraits(.isButton)
       .accessibilityRemoveTraits(.isImage)
+      .navigationTitle("Accessibility Labels")
   }
 }
 

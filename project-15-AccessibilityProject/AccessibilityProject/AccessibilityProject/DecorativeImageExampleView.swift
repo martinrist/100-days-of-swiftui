@@ -12,6 +12,7 @@ struct DecorativeImageExampleView: View {
     Image(decorative: "galina-n-189483")
       .resizable()
       .scaledToFit()
+      .navigationTitle("Decorative Images")
   }
 }
 

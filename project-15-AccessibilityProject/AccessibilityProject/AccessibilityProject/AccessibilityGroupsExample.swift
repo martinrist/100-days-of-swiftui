@@ -16,6 +16,7 @@ struct AccessibilityGroupsExample: View {
     }
     .accessibilityElement(children: .ignore)
     .accessibilityLabel("Your score is 1000")
+    .navigationTitle("Accessibility Groups")
   }
 }
 

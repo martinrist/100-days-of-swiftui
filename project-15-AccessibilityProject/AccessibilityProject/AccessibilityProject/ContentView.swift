@@ -21,6 +21,10 @@ struct ContentView: View {
         NavigationLink(destination: AccessibilityGroupsExample()) {
           Text("Accessibility Groups example")
         }
+        NavigationLink(destination: AccessibleSliderExampleView()) {
+          Text("Accessible `Slider` example")
+        }
+
       }
       .navigationTitle("Accessibility")
     }

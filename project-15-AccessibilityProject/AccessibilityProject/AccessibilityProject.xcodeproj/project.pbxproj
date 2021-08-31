@@ -14,6 +14,7 @@
 		2FD3FD3726DE527600B300C5 /* AccessibilityLabelExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FD3626DE527600B300C5 /* AccessibilityLabelExampleView.swift */; };
 		2FD3FD3926DE530400B300C5 /* DecorativeImageExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FD3826DE530400B300C5 /* DecorativeImageExampleView.swift */; };
 		2FD3FD3B26DE537500B300C5 /* AccessibilityGroupsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FD3A26DE537500B300C5 /* AccessibilityGroupsExample.swift */; };
+		2FD3FD3D26DE54A400B300C5 /* AccessibleSliderExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FD3C26DE54A400B300C5 /* AccessibleSliderExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2FD3FD3626DE527600B300C5 /* AccessibilityLabelExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabelExampleView.swift; sourceTree = "<group>"; };
 		2FD3FD3826DE530400B300C5 /* DecorativeImageExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorativeImageExampleView.swift; sourceTree = "<group>"; };
 		2FD3FD3A26DE537500B300C5 /* AccessibilityGroupsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityGroupsExample.swift; sourceTree = "<group>"; };
+		2FD3FD3C26DE54A400B300C5 /* AccessibleSliderExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSliderExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2FD3FD3626DE527600B300C5 /* AccessibilityLabelExampleView.swift */,
 				2FD3FD3826DE530400B300C5 /* DecorativeImageExampleView.swift */,
 				2FD3FD3A26DE537500B300C5 /* AccessibilityGroupsExample.swift */,
+				2FD3FD3C26DE54A400B300C5 /* AccessibleSliderExampleView.swift */,
 				2FD3FD2C26DE4C7A00B300C5 /* Assets.xcassets */,
 				2FD3FD2E26DE4C7A00B300C5 /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				2FD3FD3B26DE537500B300C5 /* AccessibilityGroupsExample.swift in Sources */,
 				2FD3FD3726DE527600B300C5 /* AccessibilityLabelExampleView.swift in Sources */,
+				2FD3FD3D26DE54A400B300C5 /* AccessibleSliderExampleView.swift in Sources */,
 				2FD3FD2B26DE4C7900B300C5 /* ContentView.swift in Sources */,
 				2FD3FD3926DE530400B300C5 /* DecorativeImageExampleView.swift in Sources */,
 				2FD3FD2926DE4C7900B300C5 /* AccessibilityProjectApp.swift in Sources */,
