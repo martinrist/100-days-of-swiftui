@@ -30,6 +30,7 @@ struct ContentView: View {
             showingLaunchDates ? Text(mission.formattedLaunchDate) : Text(crewList(for: mission))
           }
         }
+        .accessibilityLabel("\(mission.displayName), \(showingLaunchDates ? "Launched: \(mission.formattedLaunchDate)" : "Crew: \(crewList(for: mission))")")
       }
       .navigationBarTitle("Moonshot")
       .navigationBarItems(trailing: Button(showingLaunchDates ? "Crew" : "Launch Dates") {
