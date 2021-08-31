@@ -32,6 +32,8 @@ struct ContentView: View {
         selectedPicture = Int.random(in: 0...3)
       }
       .accessibilityLabel(labels[selectedPicture])
+      .accessibilityAddTraits(.isButton)
+      .accessibilityRemoveTraits(.isImage)
   }
 }
 
