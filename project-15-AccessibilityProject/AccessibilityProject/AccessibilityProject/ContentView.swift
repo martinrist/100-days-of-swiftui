@@ -15,6 +15,12 @@ struct ContentView: View {
         NavigationLink(destination: AccessibilityLabelExampleView()) {
           Text("Accessibility Label example")
         }
+        NavigationLink(destination: DecorativeImageExampleView()) {
+          Text("Decorative image example")
+        }
+        NavigationLink(destination: AccessibilityGroupsExample()) {
+          Text("Accessibility Groups example")
+        }
       }
       .navigationTitle("Accessibility")
     }
