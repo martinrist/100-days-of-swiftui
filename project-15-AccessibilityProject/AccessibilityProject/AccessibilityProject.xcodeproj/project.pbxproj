@@ -11,6 +11,7 @@
 		2FD3FD2B26DE4C7900B300C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FD2A26DE4C7900B300C5 /* ContentView.swift */; };
 		2FD3FD2D26DE4C7A00B300C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD3FD2C26DE4C7A00B300C5 /* Assets.xcassets */; };
 		2FD3FD3026DE4C7A00B300C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD3FD2F26DE4C7A00B300C5 /* Preview Assets.xcassets */; };
+		2FD3FD3726DE527600B300C5 /* AccessibilityLabelExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FD3626DE527600B300C5 /* AccessibilityLabelExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2FD3FD2A26DE4C7900B300C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FD3FD2C26DE4C7A00B300C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FD3FD2F26DE4C7A00B300C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FD3FD3626DE527600B300C5 /* AccessibilityLabelExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabelExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				2FD3FD2826DE4C7900B300C5 /* AccessibilityProjectApp.swift */,
 				2FD3FD2A26DE4C7900B300C5 /* ContentView.swift */,
+				2FD3FD3626DE527600B300C5 /* AccessibilityLabelExampleView.swift */,
 				2FD3FD2C26DE4C7A00B300C5 /* Assets.xcassets */,
 				2FD3FD2E26DE4C7A00B300C5 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD3FD3726DE527600B300C5 /* AccessibilityLabelExampleView.swift in Sources */,
 				2FD3FD2B26DE4C7900B300C5 /* ContentView.swift in Sources */,
 				2FD3FD2926DE4C7900B300C5 /* AccessibilityProjectApp.swift in Sources */,
 			);
