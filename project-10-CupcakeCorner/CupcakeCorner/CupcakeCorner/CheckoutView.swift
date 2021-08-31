@@ -21,7 +21,7 @@ struct CheckoutView: View {
     GeometryReader { reader in
       ScrollView {
         VStack {
-          Image("cupcakes")
+          Image(decorative: "cupcakes")
             .resizable()
             .scaledToFit()
             .frame(width: reader.size.width)
